@@ -766,6 +766,37 @@ $env.config = {
         }
     ]
 }
+let posh_dir = (brew --prefix oh-my-posh | str trim)
+let posh_theme = $'($posh_dir)/themes/'
+# Change the theme names to: zash/space/robbyrussel/powerline/powerlevel10k_lean/
+# material/half-life/lambda Or double lines theme: amro/pure/spaceship, etc.
+# For more [Themes demo](https://ohmyposh.dev/docs/themes)
+# $env.PROMPT_COMMAND = { || oh-my-posh prompt print primary --config $'($posh_theme)/easy-term.omp.json' }
+# Optional
+# $env.PROMPT_INDICATOR = $"(ansi y)$> (ansi reset)"
+# source ~/.oh-my-posh.nu
+#
+alias cat = bat
+alias ll = exa -alh
+alias tree = exa --tree -L 2 -alh
+
+use ~/.cache/starship/init.nu
+let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
+if $env.TERM == xterm-kitty {
+    neofetch --kitty ~/Documents//cool_wallpaper.jpg
+}
+match $env.TERM_PROGRAM {
+    WezTerm => {neofetch --iterm2 ~/Documents/cool_wallpaper.jpg},
+    rio => {neofetch --w3m ~/Documents/cool_wallpaper.jpg},
+    _ => {}
+}
+
+
+
+$env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
+source /Users/inust/.asdf/asdf.nu
+
+
 use ~/.cache/starship/init.nu
 let text = (figlet -w 150 -f trek -c "Hello Inu,\n Welcome to the Dev World!" )
 neofetch --iterm2 ~/Documents/frank_ocean.jpeg

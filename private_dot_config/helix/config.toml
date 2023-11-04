@@ -1,0 +1,58 @@
+theme = "tokyonight"
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+auto-signature-help = false
+[keys.insert]
+C-c = "normal_mode"
+C-l = "completion"
+
+C-n = "move_line_up"
+C-p = "move_line_down"
+C-e = "goto_line_end_newline"
+C-a = "goto_line_start"
+[keys.select]
+C-c = "normal_mode"
+"$" = "goto_line_end"
+0 = "goto_line_start"
+[keys.normal]
+C-c = {}
+"]"={ b = "goto_next_buffer"}
+"["={ b = "goto_previous_buffer"}
+"$" = "goto_line_end"
+0 = "goto_line_start"
+C-s = ":w"
+
+[keys.normal.space]
+q = "wclose"
+"/" = "toggle_comments"
+W = "global_search"
+
+
+[editor]
+true-color = true
+cursorline = true
+bufferline = "multiple"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-format = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
