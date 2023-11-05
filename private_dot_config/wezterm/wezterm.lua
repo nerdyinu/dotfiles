@@ -124,7 +124,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	line_height = 1.4,
+	line_height = 1.2,
 	font = wezterm.font_with_fallback({ "CommitMono", { family = "Symbols Nerd Font", scale = 0.75 } }),
 	window_frame = {
 		-- The font used in the tab bar.
