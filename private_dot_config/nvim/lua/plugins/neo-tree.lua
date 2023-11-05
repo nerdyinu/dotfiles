@@ -1,3 +1,34 @@
+function system_open(path)
+  if true then
+    return {}
+  end
+  if vim.ui.open then
+    return vim.ui.open(path)
+  end
+  local cmd
+  if vim.fn.has("win32") == 1 and vim.fn.executable("explorer") == 1 then
+    cmd = { "cmd.exe", "/K", "explorer" }
+  elseif vim.fn.has("unix") == 1 and vim.fn.executable("xdg-open") == 1 then
+    cmd = { "xdg-open" }
+  elseif (vim.fn.has("mac") == 1 or vim.fn.has("unix") == 1) and vim.fn.executable("open") == 1 then
+    cmd = { "open" }
+  end
+  if not cmd then
+    notify("Available system opening tool not found!", vim.log.levels.ERROR)
+  end
+  vim.fn.jobstart(vim.fn.extend(cmd, { path or vim.fn.expand("<cfile>") }), { detach = true })
+end
+
+function extend_tbl(default, opts)
+  opts = opts or {}
+  return default and vim.tbl_deep_extend("force", default, opts) or opts
+end
+
+function notify(msg, type, opts)
+  vim.schedule(function()
+    vim.notify(msg, type, extend_tbl({ title = "AstroNvim" }, opts))
+  end)
+end
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",

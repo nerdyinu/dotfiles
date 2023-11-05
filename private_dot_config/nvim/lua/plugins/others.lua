@@ -1,30 +1,6 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-function system_open(path)
-if true then return {} end
-  if vim.ui.open then return vim.ui.open(path) end
-  local cmd
-  if vim.fn.has "win32" == 1 and vim.fn.executable "explorer" == 1 then
-    cmd = { "cmd.exe", "/K", "explorer" }
-  elseif vim.fn.has "unix" == 1 and vim.fn.executable "xdg-open" == 1 then
-    cmd = { "xdg-open" }
-  elseif (vim.fn.has "mac" == 1 or vim.fn.has "unix" == 1) and vim.fn.executable "open" == 1 then
-    cmd = { "open" }
-  end
-  if not cmd then notify("Available system opening tool not found!", vim.log.levels.ERROR) end
-  vim.fn.jobstart(vim.fn.extend(cmd, { path or vim.fn.expand "<cfile>" }), { detach = true })
-end
 
-function extend_tbl(default, opts)
-  opts = opts or {}
-  return default and vim.tbl_deep_extend("force", default, opts) or opts
-end
-
-function notify(msg, type, opts)
-  vim.schedule(function()
-    vim.notify(msg, type, extend_tbl({ title = "AstroNvim" }, opts))
-  end)
-end
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
 -- In your plugin files, you can:
@@ -195,17 +171,17 @@ return {
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
   -- If you'd rather extend the default config, use the code below instead:
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = function(_, opts)
-  --     -- add tsx and treesitter
-  --     vim.list_extend(opts.ensure_installed, {
-  --       "tsx",
-  --       "typescript",
-  --       "rust",
-  --     })
-  --   end,
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      -- add tsx and treesitter
+      vim.list_extend(opts.ensure_installed, {
+        "tsx",
+        "typescript",
+        "rust",
+      })
+    end,
+  },
 
   -- the opts function can also be used to change the default opts:
   {
