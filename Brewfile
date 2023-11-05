@@ -112,5 +112,5 @@ cask "font-fira-mono"
 cask "font-hack-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "hashicorp-vagrant"
-cask "wezterm"
+cask "wezterm-nightly"
 
