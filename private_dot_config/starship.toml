@@ -73,8 +73,8 @@ disabled = false
 added_style = 'bold blue'
 format = '[[+$added]($added_style)/[-$deleted]($deleted_style)]'
 
-[battery]
-disabled = true
+# [battery]
+# disabled = true
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
