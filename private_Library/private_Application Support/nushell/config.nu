@@ -775,7 +775,7 @@ let posh_theme = $'($posh_dir)/themes/'
 # Optional
 # $env.PROMPT_INDICATOR = $"(ansi y)$> (ansi reset)"
 # source ~/.oh-my-posh.nu
-#
+
 alias cat = bat
 alias ll = exa -alh
 alias tree = exa --tree -L 2 -alh
@@ -794,7 +794,7 @@ match $env.TERM_PROGRAM {
 
 
 $env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
-source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
+source /Users/jeong-in-u/.asdf/asdf.nu
 
 
 use ~/.cache/starship/init.nu
