@@ -794,7 +794,7 @@ match $env.TERM_PROGRAM {
 
 
 $env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
-source /Users/jeong-in-u/.asdf/asdf.nu
+source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
 
 
 use ~/.cache/starship/init.nu
