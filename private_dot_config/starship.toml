@@ -1,3 +1,17 @@
+
+[time]
+disabled = false
+format = '\[[$time]($style)\]'
+
+[username]
+show_always = true
+format = '\[[$user]($style)\] '
+
+[character]
+vimcmd_symbol = '[V](bold green) '
+success_symbol = '[➜](bold green) '
+error_symbol = '[➜](bold red) '
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -70,11 +84,12 @@ style = "bold dimmed white"
 disabled = false
 
 [git_metrics]
+disabled = false
 added_style = 'bold blue'
-format = '[[+$added]($added_style)/[-$deleted]($deleted_style)]'
+format = '[\[+$added]($added_style)/[-$deleted]($deleted_style)\]'
 
-# [battery]
-# disabled = true
+[battery]
+disabled = true
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
@@ -195,11 +210,6 @@ format = '\[[$symbol($version)]($style)\]'
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'
 
-[time]
-format = '\[[$time]($style)\]'
-
-[username]
-format = '\[[$user]($style)\]'
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
