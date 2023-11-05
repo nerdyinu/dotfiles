@@ -112,8 +112,5 @@ cask "font-fira-mono"
 cask "font-hack-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "hashicorp-vagrant"
-cask "mysqlworkbench"
-cask "visual-studio-code"
-cask "warp"
 cask "wezterm"
 
