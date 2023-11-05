@@ -1,5 +1,5 @@
 format = """$all"""
-# right_format = """$time"""
+right_format = """$cmd_duration"""
 
 [time]
 disabled = false
