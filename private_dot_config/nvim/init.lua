@@ -2,6 +2,7 @@
 require("config.lazy")
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
+---@class ParserConfig
 parser_config.nu = {
   install_info = {
     url = "https://github.com/nushell/tree-sitter-nu",
