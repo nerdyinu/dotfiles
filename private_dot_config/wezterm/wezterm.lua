@@ -9,7 +9,7 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "Catppuccin Mocha"
+		return "tokyonight-night"
 	else
 		return "Gruvbox (Gogh)"
 	end
