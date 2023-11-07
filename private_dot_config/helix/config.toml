@@ -1,4 +1,4 @@
-theme = "catppuccin"
+theme = "tokyonight"
 [editor.lsp]
 display-inlay-hints = true
 display-messages = true
