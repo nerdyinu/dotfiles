@@ -9,13 +9,28 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
+{
+  "zbirenbaum/copilot.lua",
+  opts = {
+    suggestion = { enabled = true,
+keymap = {accept = "<C-l>",},
+      },
+    panel = { enabled = true ,keymap = {accept = "<C-l>",},},
+    filetypes = {
+      markdown = true,
+      help = true,
+    },
+
+  },
+
+},
   { "ellisonleao/gruvbox.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -116,6 +131,17 @@ return {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
         rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
+              },
+              cargo = {
+                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
+                extraArgs = { "--profile", "rust-analyzer", },
+              }
+            },
+          },
           hint = { enabled = true },
         },
         lua_ls = {
