@@ -27,5 +27,7 @@ local function map(mode, lhs, rhs, opts)
   end
   vim.keymap.set(mode, lhs, rhs, options)
 end
-vim.keymap.set({ "v", "n" }, "<Tab>", ">gv")
-vim.keymap.set({ "n", "v" }, "<S-Tab>", "<gv")
+vim.keymap.set("v", "<Tab>", ">gv")
+vim.keymap.set("v", "<S-Tab>", "<gv")
+vim.keymap.set("n", "<Tab>", ">>")
+vim.keymap.set("n", "<S-Tab>", "<<")

@@ -126,7 +126,11 @@ return {
         },
         lua_ls = {
           settings = {
+
             Lua = {
+              format = {
+                enable= true
+              },
               runtime = {
                 version = "LuaJIT"
               },
@@ -134,6 +138,7 @@ return {
                 checkThirdParty = false,
               },
               completion = {
+                enable = true,
                 callSnippet = "Replace",
               },
               -- hint = {enabled=true},
