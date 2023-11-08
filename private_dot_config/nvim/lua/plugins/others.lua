@@ -12,14 +12,18 @@ return {
 {
   "zbirenbaum/copilot.lua",
   opts = {
-    suggestion = { enabled = true,
-keymap = {accept = "<C-l>",},
-      },
-    panel = { enabled = true ,keymap = {accept = "<C-l>",},},
-    filetypes = {
-      markdown = true,
-      help = true,
+    suggestion = { 
+        enabled = true,
+        keymap = {
+          accept = "<C-l>",
+        },
     },
+    panel = { 
+        enabled = true ,
+        keymap = {
+          accept = "<C-l>",
+        },
+      },
 
   },
 
@@ -106,8 +110,60 @@ keymap = {accept = "<C-l>",},
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+        rust_analyzer = {
+            settings = {
+              ["rust-analyzer"] = {
+                checkOnSave = {
+                  command = "clippy",
+                },
+                cargo = {
+                  extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
+                  extraArgs = { "--profile", "rust-analyzer", },
+                }
+              },
+          },
+          hint = { enabled = true },
+        },
+        lua_ls = {
+          settings = {
+            Lua = {
+              runtime = {
+                version = "LuaJIT"
+              },
+              workspace = {
+                checkThirdParty = false,
+              },
+              completion = {
+                callSnippet = "Replace",
+              },
+              -- hint = {enabled=true},
+            },
+          },
+        }
+
       },
     },
+  },
+  {
+    "gitsigns.nvim",
+    opts={
+ on_attach = function(buffer)
+    local gs = package.loaded.gitsigns
+
+    local function map(mode, l, r, desc)
+      vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+    end
+    map({ "n", "v" }, "<leader>gh", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
+    map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+    map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
+    map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
+    map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
+    map("n", "<leader>gp", gs.preview_hunk, "Preview Hunk")
+    map("n", "<leader>gL", function() gs.blame_line({ full = true }) end, "Blame Line")
+    map("n", "<leader>gd", gs.diffthis, "Diff This")
+    map("n", "<leader>gD", function() gs.diffthis("~") end, "Diff This ~")
+    end
+  },
   },
 
   -- add tsserver and setup with typescript.nvim instead of lspconfig
@@ -130,26 +186,7 @@ keymap = {accept = "<C-l>",},
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
-        rust_analyzer = {
-          settings = {
-            ["rust-analyzer"] = {
-              checkOnSave = {
-                command = "clippy",
-              },
-              cargo = {
-                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
-                extraArgs = { "--profile", "rust-analyzer", },
-              }
-            },
-          },
-          hint = { enabled = true },
         },
-        lua_ls = {
-          Lua = {
-            hint = { enabled = true },
-          },
-        },
-      },
       inlay_hints = {
         enabled = true,
       },
@@ -171,28 +208,28 @@ keymap = {accept = "<C-l>",},
   -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
   -- add more treesitter parsers
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-        "rust",
-      },
-    },
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = {
+  --     ensure_installed = {
+  --       "bash",
+  --       "html",
+  --       "javascript",
+  --       "json",
+  --       "lua",
+  --       "markdown",
+  --       "markdown_inline",
+  --       "python",
+  --       "query",
+  --       "regex",
+  --       "tsx",
+  --       "typescript",
+  --       "vim",
+  --       "yaml",
+  --       "rust",
+  --     },
+  --   },
+  -- },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
@@ -233,7 +270,7 @@ keymap = {accept = "<C-l>",},
   -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-  -- { import = "lazyvim.plugins.extras.lang.json" },
+  { import = "lazyvim.plugins.extras.lang.json" },
 
   -- add any tools you want to have installed below
   {
@@ -270,7 +307,7 @@ keymap = {accept = "<C-l>",},
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
-
+ 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 

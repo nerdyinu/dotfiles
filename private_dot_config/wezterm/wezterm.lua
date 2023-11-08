@@ -124,6 +124,8 @@ return {
 		top = 0,
 		bottom = 0,
 	},
+	window_background_opacity = 1.0,
+	text_background_opacity = 1.0,
 	line_height = 1.2,
 	font = wezterm.font_with_fallback({ "CommitMono", { family = "Symbols Nerd Font", scale = 0.75 } }),
 	window_frame = {
