@@ -1,7 +1,0 @@
-[package]
-name = "brainfuck"
-version = "0.1.0"
-authors = ["Sean Gillespie <sean.william.g@gmail.com>"]
-
-[dependencies.gccjit]
-path = "../.."
