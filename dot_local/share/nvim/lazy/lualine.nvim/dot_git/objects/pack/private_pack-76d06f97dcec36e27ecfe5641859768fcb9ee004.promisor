@@ -1,0 +1,9 @@
+2248ef254d0a1488a72041cfb45ca9caada6d994 HEAD
+c82d87588760ad7185c146ed7029ecc327b7bcb1 refs/heads/chore/translate_nvim_isolated_script
+55a26ce849c88abf1c2cddc3343f216c47bcff39 refs/heads/enhance/cache_components
+ba6d78f9b5d9cdf57e9ebe25d349288a68663c5d refs/heads/feat/component_priority
+9b16afa2b41537fc73a8391595df2d049e559c2a refs/heads/feat/native_section_sep
+2248ef254d0a1488a72041cfb45ca9caada6d994 refs/heads/master
+2469ce0268bc919128efb74337e6a8743224e316 refs/heads/web-docs
+c55af3b39cc50109aa75d445e38f2089b023e5df refs/tags/compat-nvim-0.5
+c55af3b39cc50109aa75d445e38f2089b023e5df refs/tags/compat-nvim-0.6

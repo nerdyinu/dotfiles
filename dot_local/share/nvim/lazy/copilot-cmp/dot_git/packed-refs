@@ -1,0 +1,15 @@
+# pack-refs with: peeled fully-peeled sorted 
+ea676365560a76a4bdb6166efbf659a2783b3928 refs/remotes/origin/PanelCompletionsWorking
+dc0f52fa4c1b129e1d89c5f59f0a985f1dd9f6bd refs/remotes/origin/complete-empty
+eb95a7b27c81c9072038e82838aef2d23303500f refs/remotes/origin/copilot-rs
+9743679b98e2c4501531b4bfcee7e7b48d911761 refs/remotes/origin/cycling_completions
+e952a55695c9fbeb60ce82eb820e48082f505572 refs/remotes/origin/cycling_rewrite
+6b19fdae562949e1fe5e896a519027e7da3df468 refs/remotes/origin/debounce
+a4ec0a1228b47022847426ecd1b3923677c10f62 refs/remotes/origin/duplicate-fix
+f6c0da8f1fee3b61d1f7476cadfdad2cf63ada11 refs/remotes/origin/fix-dup
+d53f1e8aa2023001f3c7c8404f3494af880d7e4b refs/remotes/origin/formatting-fixes
+cfb97f435b6aa038812caa7c7d74531b584e71e6 refs/remotes/origin/indentation-fixes
+72fbaa03695779f8349be3ac54fa8bd77eed3ee3 refs/remotes/origin/master
+7f98fbec35976688f57a67f951b11e6ef0841162 refs/remotes/origin/tabs
+b3d8764cf2af5f7054e9b5bf843950768a2972a3 refs/remotes/origin/testing
+73b6b9d99330c68a20aadfa9b4d6817683beaae9 refs/remotes/origin/update-2_0

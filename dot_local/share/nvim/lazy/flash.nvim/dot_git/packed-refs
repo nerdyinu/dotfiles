@@ -1,0 +1,34 @@
+# pack-refs with: peeled fully-peeled sorted 
+48817af25f51c0590653bbc290866e4890fe1cbe refs/remotes/origin/main
+aa9c32b795069f18bd23d68fcf34e57730334301 refs/remotes/origin/rainbow
+6fe92e13580c853451f0f22f6f33d00dada6a159 refs/remotes/origin/release-please--branches--main--components--flash.nvim
+057a2d492c0c5b66e4f6bfb8b11857fa1b3acc78 refs/tags/stable
+^48817af25f51c0590653bbc290866e4890fe1cbe
+083c35b9098f688bfad755af112a3fffbfeaf34a refs/tags/v1.0.0
+4dcd4af8609c7a7061711dd0103d6ee66c2d2303 refs/tags/v1.1.0
+ebc57ab1a1eb05ac6e8a40eaec8b4b267ac7cd58 refs/tags/v1.10.0
+c7d2ad5ba135ce0c646934d5dc8c8b9f09fd91c7 refs/tags/v1.10.1
+f08eac475188b7c81bbe497aec6d98c5fe15092e refs/tags/v1.11.0
+bdfda726eb9e5e87d5860cdd2f33d678cc343cdb refs/tags/v1.12.0
+30a6385c92cc37822eb701c6984d6ba9cbd6f1ab refs/tags/v1.13.0
+47fdbbb139d54eef2a0d164e3080d9924c969f77 refs/tags/v1.13.1
+b4814b28fc2c91d2383311cfb2f3a1fe2778314e refs/tags/v1.13.2
+947170a7abc7e145cc87afd3ecb6aeb281d88a52 refs/tags/v1.14.0
+a8da6ff212c1885ecde26af477207742959c67d7 refs/tags/v1.15.0
+93d69afcfb07df7c29e155de4179b2db8b11daee refs/tags/v1.16.0
+610ade978c816f1d6156ca4ffafc2c4b8c70909c refs/tags/v1.17.0
+a83776ef4e96ca5870f42d00b50857e69fc3b141 refs/tags/v1.17.1
+ab7b03e5e098de59689d1478b6fea8202d0204ab refs/tags/v1.17.2
+e5a7bd96d0bb7e0806bfc18adea5ab148165bd62 refs/tags/v1.17.3
+f219066f1976c781780e2c317d52d515bc0e588b refs/tags/v1.18.0
+dc146886c3c2e0281d9221305ad589ccb43ab535 refs/tags/v1.18.1
+48817af25f51c0590653bbc290866e4890fe1cbe refs/tags/v1.18.2
+4a753f0b1d9b671a04d931d7e9fbb5ba5ad1cba0 refs/tags/v1.2.0
+5477a4f51d63d4e31ef4d3ac2b9c54805ec1d1e7 refs/tags/v1.3.0
+5381ca6bca29084ab160b91b9174549c9530f60e refs/tags/v1.4.0
+5aef16d260d443c9639a481539eeea69d51a9547 refs/tags/v1.4.1
+f0697f62099d5ba1ad3f3d6dfeacbd9c2f152c41 refs/tags/v1.5.0
+5e1096eab9823c566a63817642fc1d28f40b1af0 refs/tags/v1.6.0
+7b58c5bf7698bdb4787be3607d954c3d38635c9d refs/tags/v1.7.0
+0a5e7fc70b8d9701eb0e1dbf25816412300d180c refs/tags/v1.8.0
+7f2d68528c4395a84fdbcea1857049217d7f3dda refs/tags/v1.9.0

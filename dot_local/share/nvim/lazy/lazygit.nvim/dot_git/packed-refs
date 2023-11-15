@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+9a2e5a324101d8734f106c5dabf79c85cda51b89 refs/remotes/origin/bug/support-fish-shell
+4d97a44468c45072682b44238d4c4f36e12dbb61 refs/remotes/origin/bug/support-fish-shell-nvim-0.4.x
+08920a32881c87759f1afcc6714814821423695c refs/remotes/origin/fix-shell-not-reverting
+de35012036d43bca03628d40d083f7c02a4cda3f refs/remotes/origin/main
+dbff1e10051cc8bbc96559de0bd82285e273637f refs/remotes/origin/nvim-v0.4.3

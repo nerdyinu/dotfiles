@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+8e4090bf9412e24b05823c771cb3956c2ba72981 refs/remotes/origin/master
+56282c9d52307e626e7915f1cf0f34f16c8ac5d6 refs/remotes/origin/nvim-0.5
+1a69db425c7426f01d43b526247888fba6b6ed52 refs/remotes/origin/release-please--branches--master--components--aerial.nvim
+f8c5b93e10611356264602e9bc1046d478124731 refs/remotes/origin/stevearc-rename
+bd09b6c1659e0edb0c7a38f743bea6a204f29ca9 refs/tags/stable
+^63ec2bfc3d9b8ce1fd943fff14781504d8ee250e
+603c805d2d46deb3f9d492d829cc320ef0184d37 refs/tags/v1.0.0
+fb1f08c9f90e8b0c04b2f2c5d95d06288a14c5b2 refs/tags/v1.1.0
+ae33427e1aa54bfdd164313716cdc10e7d7b927a refs/tags/v1.2.0
+63ec2bfc3d9b8ce1fd943fff14781504d8ee250e refs/tags/v1.3.0

@@ -1,0 +1,16 @@
+2248ef254d0a1488a72041cfb45ca9caada6d994		branch 'master' of https://github.com/nvim-lualine/lualine.nvim
+c82d87588760ad7185c146ed7029ecc327b7bcb1	not-for-merge	branch 'chore/translate_nvim_isolated_script' of https://github.com/nvim-lualine/lualine.nvim
+55a26ce849c88abf1c2cddc3343f216c47bcff39	not-for-merge	branch 'enhance/cache_components' of https://github.com/nvim-lualine/lualine.nvim
+ba6d78f9b5d9cdf57e9ebe25d349288a68663c5d	not-for-merge	branch 'feat/component_priority' of https://github.com/nvim-lualine/lualine.nvim
+9b16afa2b41537fc73a8391595df2d049e559c2a	not-for-merge	branch 'feat/native_section_sep' of https://github.com/nvim-lualine/lualine.nvim
+2469ce0268bc919128efb74337e6a8743224e316	not-for-merge	branch 'web-docs' of https://github.com/nvim-lualine/lualine.nvim
+c55af3b39cc50109aa75d445e38f2089b023e5df	not-for-merge	tag 'compat-nvim-0.5' of https://github.com/nvim-lualine/lualine.nvim
+c55af3b39cc50109aa75d445e38f2089b023e5df	not-for-merge	tag 'compat-nvim-0.6' of https://github.com/nvim-lualine/lualine.nvim
+2248ef254d0a1488a72041cfb45ca9caada6d994		branch 'master' of https://github.com/nvim-lualine/lualine.nvim
+c82d87588760ad7185c146ed7029ecc327b7bcb1	not-for-merge	branch 'chore/translate_nvim_isolated_script' of https://github.com/nvim-lualine/lualine.nvim
+55a26ce849c88abf1c2cddc3343f216c47bcff39	not-for-merge	branch 'enhance/cache_components' of https://github.com/nvim-lualine/lualine.nvim
+ba6d78f9b5d9cdf57e9ebe25d349288a68663c5d	not-for-merge	branch 'feat/component_priority' of https://github.com/nvim-lualine/lualine.nvim
+9b16afa2b41537fc73a8391595df2d049e559c2a	not-for-merge	branch 'feat/native_section_sep' of https://github.com/nvim-lualine/lualine.nvim
+2469ce0268bc919128efb74337e6a8743224e316	not-for-merge	branch 'web-docs' of https://github.com/nvim-lualine/lualine.nvim
+c55af3b39cc50109aa75d445e38f2089b023e5df	not-for-merge	tag 'compat-nvim-0.5' of https://github.com/nvim-lualine/lualine.nvim
+c55af3b39cc50109aa75d445e38f2089b023e5df	not-for-merge	tag 'compat-nvim-0.6' of https://github.com/nvim-lualine/lualine.nvim

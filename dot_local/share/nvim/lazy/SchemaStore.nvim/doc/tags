@@ -1,0 +1,8 @@
+schemastore	schemastore.txt	/*schemastore*
+schemastore-changelog	schemastore.txt	/*schemastore-changelog*
+schemastore-contents	schemastore.txt	/*schemastore-contents*
+schemastore-intro	schemastore.txt	/*schemastore-intro*
+schemastore-license	schemastore.txt	/*schemastore-license*
+schemastore-usage	schemastore.txt	/*schemastore-usage*
+schemastore.nvim	schemastore.txt	/*schemastore.nvim*
+schemastore.txt	schemastore.txt	/*schemastore.txt*
