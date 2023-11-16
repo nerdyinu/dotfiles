@@ -40,3 +40,5 @@ data.location=/Users/inust/.task
 #include no-color.theme
 
 news.version=2.6.0
+context.weekly.read=project:weekly or +week
+context=weekly

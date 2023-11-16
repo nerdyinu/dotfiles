@@ -1,3 +1,13 @@
 {"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T180851Z","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd"}
 {"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231116T180951Z","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb"}
 {"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231116T181009Z","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377"}
+{"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T184136Z","priority":"H","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd"}
+{"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T184236Z","priority":"H","project":"Weekly","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd"}
+{"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231116T184237Z","project":"Weekly","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb"}
+{"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231116T184237Z","project":"Weekly","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377"}
+{"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T185847Z","priority":"H","project":"Weekly","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd","tags":["week"]}
+{"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231116T185848Z","project":"Weekly","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb","tags":["week"]}
+{"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231116T185848Z","project":"Weekly","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}
+{"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T190143Z","priority":"H","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd","tags":["week"]}
+{"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231116T190149Z","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb","tags":["week"]}
+{"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231116T190153Z","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}

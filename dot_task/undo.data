@@ -7,3 +7,43 @@ new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modifie
 time 1700158209
 new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700158209" status:"pending" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 ---
+time 1700160096
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700158131" status:"pending" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700160096" priority:"H" status:"pending" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+---
+time 1700160156
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700160096" priority:"H" status:"pending" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700160156" priority:"H" project:"Weekly" status:"pending" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+---
+time 1700160157
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700158191" status:"pending" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700160157" project:"Weekly" status:"pending" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+---
+time 1700160157
+old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700158209" status:"pending" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700160157" project:"Weekly" status:"pending" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+---
+time 1700161127
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700160156" priority:"H" project:"Weekly" status:"pending" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161127" priority:"H" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+---
+time 1700161128
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700160157" project:"Weekly" status:"pending" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+---
+time 1700161128
+old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700160157" project:"Weekly" status:"pending" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+---
+time 1700161303
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161127" priority:"H" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161303" priority:"H" status:"pending" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+---
+time 1700161309
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700161309" status:"pending" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+---
+time 1700161313
+old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161313" status:"pending" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+---
