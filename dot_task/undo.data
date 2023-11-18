@@ -130,3 +130,10 @@ time 1700221665
 old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700208125" priority:"L" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
 new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700221665" priority:"M" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
 ---
+time 1700294711
+old [description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700208113" status:"pending" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
+new [description:"add MOMENTI_MACHINE ssh key as github action ssh key" end:"1700294711" entry:"1700207969" modified:"1700294711" status:"completed" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
+---
+time 1700295497
+new [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
+---

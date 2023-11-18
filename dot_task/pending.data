@@ -2,5 +2,5 @@
 [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700212220" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
 [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700209985" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700208050" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
-[description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700208113" status:"pending" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
 [description:"revew #554, ReqUpdateActionFeeds Pt 7" entry:"1700221616" modified:"1700221616" status:"pending" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
+[description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
