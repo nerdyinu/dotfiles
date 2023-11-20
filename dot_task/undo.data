@@ -137,3 +137,14 @@ new [description:"add MOMENTI_MACHINE ssh key as github action ssh key" end:"170
 time 1700295497
 new [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
 ---
+time 1700373259
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700212220" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" end:"1700373259" entry:"1700158191" modified:"1700373259" priority:"M" status:"completed" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+---
+time 1700458483
+new [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700458483" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
+---
+time 1700458510
+old [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
+new [description:"figure out how to roll back indentation in nvim or clippy" end:"1700458510" entry:"1700295497" modified:"1700458510" priority:"H" status:"completed" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
+---
