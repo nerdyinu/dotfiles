@@ -148,3 +148,37 @@ time 1700458510
 old [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
 new [description:"figure out how to roll back indentation in nvim or clippy" end:"1700458510" entry:"1700295497" modified:"1700458510" priority:"H" status:"completed" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
 ---
+time 1700464747
+new [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464747" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
+---
+time 1700464851
+new [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464851" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
+---
+time 1700464865
+old [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700458483" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
+new [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700464865" priority:"H" start:"1700464865" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
+---
+time 1700464867
+old [description:"revew #554, ReqUpdateActionFeeds Pt 7" entry:"1700221616" modified:"1700221616" status:"pending" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
+new [description:"revew #554, ReqUpdateActionFeeds Pt 7" end:"1700464867" entry:"1700221616" modified:"1700464867" status:"completed" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
+---
+time 1700464877
+old [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464747" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
+new [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464877" priority:"H" start:"1700464877" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
+---
+time 1700464881
+old [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464851" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
+new [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464881" priority:"H" start:"1700464881" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
+---
+time 1700464890
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700221665" priority:"M" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700464890" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+---
+time 1700465268
+old [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700464865" priority:"H" start:"1700464865" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
+new [description:"figure out cloud api elixir Encoder error" end:"1700465268" entry:"1700458483" modified:"1700465268" priority:"H" status:"completed" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
+---
+time 1700475280
+old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700209985" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" end:"1700475280" entry:"1700158209" modified:"1700475280" status:"completed" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+---
