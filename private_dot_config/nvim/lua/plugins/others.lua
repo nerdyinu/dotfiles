@@ -446,5 +446,13 @@ return {
       -- vim.wo.foldlevel = 99
       -- vim.wo.conceallevel = 2
     end,
+  },
+  {
+    "ziontee113/icon-picker.nvim",
+    config = function()
+      require("icon-picker").setup({
+        disable_legacy_commands = true
+      })
+    end
   }
 }

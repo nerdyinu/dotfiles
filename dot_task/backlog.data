@@ -11,6 +11,7 @@
 {"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231116T190143Z","priority":"H","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd","tags":["week"]}
 {"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231116T190149Z","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb","tags":["week"]}
 {"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231116T190153Z","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}
+<<<<<<< HEAD
 {"description":"use basic_result_handle and log_and_ignore for engine api functions in mini-studio","entry":"20231117T044138Z","modified":"20231117T044138Z","priority":"H","status":"pending","uuid":"fb8f8b4c-392b-4e31-9706-d05de103e2f9"}
 {"description":"use basic_result_handle and log_and_ignore for engine api functions in mini-studio","entry":"20231117T044138Z","modified":"20231117T044210Z","priority":"H","status":"pending","uuid":"fb8f8b4c-392b-4e31-9706-d05de103e2f9","tags":["day","week"]}
 {"description":"checkout slint and decide whether or not to port from egui","entry":"20231117T052255Z","modified":"20231117T052255Z","priority":"H","status":"pending","uuid":"49b2b56c-f65c-42cb-bd0c-83b118b9048c"}
@@ -57,3 +58,13 @@
 {"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231120T072130Z","priority":"M","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd","tags":["week"]}
 {"description":"figure out cloud api elixir Encoder error","end":"20231120T072748Z","entry":"20231120T053443Z","modified":"20231120T072748Z","priority":"H","status":"completed","uuid":"e4657a31-07f9-4f9b-ad60-b7c347e78201","tags":["day"]}
 {"description":"write elixir API for maker-engine-v2","end":"20231120T101440Z","entry":"20231116T181009Z","modified":"20231120T101440Z","status":"completed","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}
+=======
+{"description":"Finish reading Effect Engineer","entry":"20231117T150022Z","modified":"20231117T150022Z","priority":"L","status":"pending","uuid":"a3353b5b-13f5-40d4-82c7-05a75ecab7c9","tags":["week"]}
+{"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231117T150033Z","start":"20231117T150033Z","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb","tags":["week"]}
+{"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231117T150042Z","start":"20231117T150042Z","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}
+{"description":"Finish reading Effect Engineer","entry":"20231117T150022Z","modified":"20231117T154156Z","priority":"L","start":"20231117T154156Z","status":"pending","uuid":"a3353b5b-13f5-40d4-82c7-05a75ecab7c9","tags":["week"]}
+{"description":"write elixir API for maker-engine-v2","entry":"20231116T181009Z","modified":"20231117T154207Z","status":"pending","uuid":"a3feec83-353b-4b83-8d5d-926559667377","tags":["week"]}
+{"description":"enable mouse inputs in mini-studio","entry":"20231116T180951Z","modified":"20231117T154217Z","status":"pending","uuid":"0587741e-84b0-41df-a94b-2860138cdcfb","tags":["week"]}
+{"description":"Draw feeds in mini-studio","entry":"20231116T180851Z","modified":"20231117T154220Z","priority":"H","start":"20231117T154220Z","status":"pending","uuid":"961db3b8-8486-4c99-b101-b178bdcb69dd","tags":["week"]}
+{"description":"checkout neovim debugging tools","due":"20231124T150000Z","entry":"20231117T172208Z","modified":"20231117T172208Z","status":"pending","uuid":"a751e349-59ff-4603-9e73-493731dfeda9","tags":["week"]}
+>>>>>>> 0e77592 (Update .task/backlog.data)
