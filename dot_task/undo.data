@@ -47,7 +47,6 @@ time 1700161313
 old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161313" status:"pending" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 ---
-<<<<<<< HEAD
 time 1700196098
 new [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700196098" priority:"H" status:"pending" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
 ---
@@ -182,35 +181,4 @@ new [description:"figure out cloud api elixir Encoder error" end:"1700465268" en
 time 1700475280
 old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700209985" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 new [description:"write elixir API for maker-engine-v2" end:"1700475280" entry:"1700158209" modified:"1700475280" status:"completed" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-=======
-time 1700233222
-new [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700233222" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
----
-time 1700233233
-old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700161309" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700233233" start:"1700233233" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
----
-time 1700233242
-old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161313" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700233242" start:"1700233242" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
----
-time 1700235716
-old [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700233222" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
-new [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700235716" priority:"L" start:"1700235716" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
----
-time 1700235727
-old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700233242" start:"1700233242" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700235727" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
----
-time 1700235737
-old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700233233" start:"1700233233" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700235737" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
----
-time 1700235740
-old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161303" priority:"H" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
-new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700235740" priority:"H" start:"1700235740" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
----
-time 1700241728
-new [description:"checkout neovim debugging tools" due:"1700838000" entry:"1700241728" modified:"1700241728" status:"pending" tags:"week" tags_week:"x" uuid:"a751e349-59ff-4603-9e73-493731dfeda9"]
->>>>>>> 0e77592 (Update .task/backlog.data)
----
+
