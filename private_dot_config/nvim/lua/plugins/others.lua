@@ -7,28 +7,42 @@
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+local function setupAllLsps()
+	-- Enable snippets-completion (nvim_cmp) and folding (nvim-ufo)
+	local lspCapabilities = vim.lsp.protocol.make_client_capabilities()
+
+  	lspCapabilities.textDocument.completion.completionItem.snippetSupport = true
+	lspCapabilities.textDocument.foldingRange =
+		{ dynamicRegistration = false, lineFoldingOnly = true }
+
+  local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
+  for _, ls in ipairs(language_servers) do
+      require('lspconfig')[ls].setup({
+          capabilities = lspCapabilities
+          -- you can add other fields for setting up lsp server in this table
+      })
+  end
+end
 return {
   -- add gruvbox
-{
-  "zbirenbaum/copilot.lua",
-  opts = {
-    suggestion = { 
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = {
         enabled = true,
         keymap = {
           accept = "<C-l>",
         },
-    },
-    panel = { 
-        enabled = true ,
+      },
+      panel = {
+        enabled = true,
         keymap = {
           accept = "<C-l>",
         },
       },
-
+    },
   },
-
-},
-  { "ellisonleao/gruvbox.nvim", enabled=false },
+  { "ellisonleao/gruvbox.nvim", enabled = false },
 
   -- Configure LazyVim to load gruvbox
   {
@@ -111,16 +125,16 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         rust_analyzer = {
-            settings = {
-              ["rust-analyzer"] = {
-                checkOnSave = {
-                  command = "clippy",
-                },
-                cargo = {
-                  extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
-                  extraArgs = { "--profile", "rust-analyzer", },
-                }
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
               },
+              cargo = {
+                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+                extraArgs = { "--profile", "rust-analyzer" },
+              },
+            },
           },
           hint = { enabled = true },
         },
@@ -129,10 +143,10 @@ return {
 
             Lua = {
               format = {
-                enable= true
+                enable = true,
               },
               runtime = {
-                version = "LuaJIT"
+                version = "LuaJIT",
               },
               workspace = {
                 checkThirdParty = false,
@@ -144,31 +158,34 @@ return {
               -- hint = {enabled=true},
             },
           },
-        }
-
+        },
       },
     },
   },
   {
     "gitsigns.nvim",
-    opts={
- on_attach = function(buffer)
-    local gs = package.loaded.gitsigns
+    opts = {
+      on_attach = function(buffer)
+        local gs = package.loaded.gitsigns
 
-    local function map(mode, l, r, desc)
-      vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
-    end
-    map({ "n", "v" }, "<leader>gh", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
-    map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
-    map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
-    map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
-    map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
-    map("n", "<leader>gp", gs.preview_hunk, "Preview Hunk")
-    map("n", "<leader>gL", function() gs.blame_line({ full = true }) end, "Blame Line")
-    map("n", "<leader>gd", gs.diffthis, "Diff This")
-    map("n", "<leader>gD", function() gs.diffthis("~") end, "Diff This ~")
-    end
-  },
+        local function map(mode, l, r, desc)
+          vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+        end
+        map({ "n", "v" }, "<leader>gh", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
+        map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+        map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
+        map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
+        map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
+        map("n", "<leader>gp", gs.preview_hunk, "Preview Hunk")
+        map("n", "<leader>gL", function()
+          gs.blame_line({ full = true })
+        end, "Blame Line")
+        map("n", "<leader>gd", gs.diffthis, "Diff This")
+        map("n", "<leader>gD", function()
+          gs.diffthis("~")
+        end, "Diff This ~")
+      end,
+    },
   },
 
   -- add tsserver and setup with typescript.nvim instead of lspconfig
@@ -183,6 +200,7 @@ return {
           vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
+        setupAllLsps()
       end,
     },
     ---@class PluginLspOpts
@@ -191,7 +209,7 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
-        },
+      },
       inlay_hints = {
         enabled = true,
       },
@@ -312,7 +330,7 @@ return {
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
- 
+
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
@@ -342,95 +360,95 @@ return {
       })
     end,
   },
-{
-  "folke/flash.nvim",
+  {
+    "folke/flash.nvim",
   -- stylua: ignore
   keys = {
     { "s", mode = { "n", "x", "o" }, false},
    },
-},
--- {
---   'nvim-orgmode/orgmode',
---   dependencies = {
---     { 'nvim-treesitter/nvim-treesitter', lazy = true },
---   },
---   event = 'VeryLazy',
---   config = function()
---     -- Load treesitter grammar for org
---     require('orgmode').setup_ts_grammar()
---
---     -- Setup treesitter
---     require('nvim-treesitter.configs').setup({
---       highlight = {
---         enable = true,
---         additional_vim_regex_highlighting = { 'org' },
---       },
---       ensure_installed = { 'org' },
---     })
---
---     -- Setup orgmode
---     require('orgmode').setup({
---       org_agenda_files = '~/orgfiles/**/*',
---       org_default_notes_file = '~/orgfiles/refile.org',
---     })
---   end,
--- },
- {
+  },
+  -- {
+  --   'nvim-orgmode/orgmode',
+  --   dependencies = {
+  --     { 'nvim-treesitter/nvim-treesitter', lazy = true },
+  --   },
+  --   event = 'VeryLazy',
+  --   config = function()
+  --     -- Load treesitter grammar for org
+  --     require('orgmode').setup_ts_grammar()
+  --
+  --     -- Setup treesitter
+  --     require('nvim-treesitter.configs').setup({
+  --       highlight = {
+  --         enable = true,
+  --         additional_vim_regex_highlighting = { 'org' },
+  --       },
+  --       ensure_installed = { 'org' },
+  --     })
+  --
+  --     -- Setup orgmode
+  --     require('orgmode').setup({
+  --       org_agenda_files = '~/orgfiles/**/*',
+  --       org_default_notes_file = '~/orgfiles/refile.org',
+  --     })
+  --   end,
+  -- },
+  {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("neorg").setup {
+      require("neorg").setup({
         load = {
           ["core.defaults"] = {},
-        --   ["core.concealer"] = {
-        --   config = {
-        --     icon_preset = "varied",
-        --     icons = {
-        --       delimiter = {
-        --         horizontal_line = {
-        --           highlight = "@neorg.delimiters.horizontal_line",
-        --         },
-        --       },
-        --       code_block = {
-        --         -- If true will only dim the content of the code block (without the
-        --         -- `@code` and `@end` lines), not the entirety of the code block itself.
-        --         content_only = true,
-        --
-        --         -- The width to use for code block backgrounds.
-        --         --
-        --         -- When set to `fullwidth` (the default), will create a background
-        --         -- that spans the width of the buffer.
-        --         --
-        --         -- When set to `content`, will only span as far as the longest line
-        --         -- within the code block.
-        --
-        --         width = "content",
-        --
-        --         -- Additional padding to apply to either the left or the right. Making
-        --         -- these values negative is considered undefined behaviour (it is
-        --         -- likely to work, but it's not officially supported).
-        --         padding = {
-        --           -- left = 20,
-        --           -- right = 20,
-        --         },
-        --
-        --         -- If `true` will conceal (hide) the `@code` and `@end` portion of the code
-        --         -- block.
-        --         -- conceal = true,
-        --
-        --         nodes = { "ranged_verbatim_tag" },
-        --         highlight = "CursorLine",
-        --         -- render = module.public.icon_renderers.render_code_block,
-        --         insert_enabled = true,
-        --       },
-        --     },
-        --   },
-        -- },
+          --   ["core.concealer"] = {
+          --   config = {
+          --     icon_preset = "varied",
+          --     icons = {
+          --       delimiter = {
+          --         horizontal_line = {
+          --           highlight = "@neorg.delimiters.horizontal_line",
+          --         },
+          --       },
+          --       code_block = {
+          --         -- If true will only dim the content of the code block (without the
+          --         -- `@code` and `@end` lines), not the entirety of the code block itself.
+          --         content_only = true,
+          --
+          --         -- The width to use for code block backgrounds.
+          --         --
+          --         -- When set to `fullwidth` (the default), will create a background
+          --         -- that spans the width of the buffer.
+          --         --
+          --         -- When set to `content`, will only span as far as the longest line
+          --         -- within the code block.
+          --
+          --         width = "content",
+          --
+          --         -- Additional padding to apply to either the left or the right. Making
+          --         -- these values negative is considered undefined behaviour (it is
+          --         -- likely to work, but it's not officially supported).
+          --         padding = {
+          --           -- left = 20,
+          --           -- right = 20,
+          --         },
+          --
+          --         -- If `true` will conceal (hide) the `@code` and `@end` portion of the code
+          --         -- block.
+          --         -- conceal = true,
+          --
+          --         nodes = { "ranged_verbatim_tag" },
+          --         highlight = "CursorLine",
+          --         -- render = module.public.icon_renderers.render_code_block,
+          --         insert_enabled = true,
+          --       },
+          --     },
+          --   },
+          -- },
           ["core.completion"] = {
             config = {
-              engine= "nvim-cmp"
-            }
+              engine = "nvim-cmp",
+            },
           },
           ["core.dirman"] = {
             config = {
@@ -441,7 +459,7 @@ return {
             },
           },
         },
-      }
+      })
 
       -- vim.wo.foldlevel = 99
       -- vim.wo.conceallevel = 2
@@ -451,8 +469,8 @@ return {
     "ziontee113/icon-picker.nvim",
     config = function()
       require("icon-picker").setup({
-        disable_legacy_commands = true
+        disable_legacy_commands = true,
       })
-    end
-  }
+    end,
+  },
 }

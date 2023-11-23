@@ -47,138 +47,41 @@ time 1700161313
 old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161128" project:"Weekly" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161313" status:"pending" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 ---
-time 1700196098
-new [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700196098" priority:"H" status:"pending" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
+time 1700233222
+new [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700233222" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
 ---
-time 1700196130
-old [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700196098" priority:"H" status:"pending" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
-new [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700196130" priority:"H" status:"pending" tags:"day,week" tags_day:"x" tags_week:"x" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
----
-time 1700198575
-new [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700198575" priority:"H" status:"pending" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
----
-time 1700198588
-old [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700196130" priority:"H" status:"pending" tags:"day,week" tags_day:"x" tags_week:"x" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
-new [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700198588" priority:"L" status:"pending" tags:"day,week" tags_day:"x" tags_week:"x" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
----
-time 1700207969
-new [description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700207969" status:"pending" tags:"urgent" tags_urgent:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
----
-time 1700208036
-old [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700198575" priority:"H" status:"pending" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
-new [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700208036" priority:"L" status:"pending" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
----
-time 1700208050
-old [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700208036" priority:"L" status:"pending" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
-new [description:"checkout slint and decide whether or not to port from egui" entry:"1700198575" modified:"1700208050" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"49b2b56c-f65c-42cb-bd0c-83b118b9048c"]
----
-time 1700208062
+time 1700233233
 old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700161309" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700208062" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700233233" start:"1700233233" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
 ---
-time 1700208071
-old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161303" priority:"H" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
-new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700208071" priority:"H" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
----
-time 1700208073
-old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700208062" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700208073" priority:"M" start:"1700208073" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
----
-time 1700208081
+time 1700233242
 old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700161313" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700208081" start:"1700208081" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700233242" start:"1700233242" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 ---
-time 1700208113
-old [description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700207969" status:"pending" tags:"urgent" tags_urgent:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
-new [description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700208113" status:"pending" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
+time 1700235716
+old [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700233222" priority:"L" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
+new [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700235716" priority:"L" start:"1700235716" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
 ---
-time 1700208125
-old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700208071" priority:"H" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
-new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700208125" priority:"L" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+time 1700235727
+old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700233242" start:"1700233242" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700235727" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
 ---
-time 1700209665
-new [description:"write CT-2461 PR Urg:6.0" entry:"1700209665" modified:"1700209665" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
+time 1700235737
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700233233" start:"1700233233" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700235737" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
 ---
-time 1700209684
-old [description:"write CT-2461 PR Urg:6.0" entry:"1700209665" modified:"1700209665" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
-new [description:"write CT-2461 PR" entry:"1700209665" modified:"1700209684" priority:"H" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
+time 1700235740
+old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700161303" priority:"H" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
+new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700235740" priority:"H" start:"1700235740" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
 ---
-time 1700209689
-old [description:"write CT-2461 PR" entry:"1700209665" modified:"1700209684" priority:"H" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
-new [description:"write CT-2461 PR" entry:"1700209665" modified:"1700209689" priority:"H" start:"1700209689" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
+time 1700241728
+new [description:"checkout neovim debugging tools" due:"1700838000" entry:"1700241728" modified:"1700241728" status:"pending" tags:"week" tags_week:"x" uuid:"a751e349-59ff-4603-9e73-493731dfeda9"]
 ---
-time 1700209973
-old [description:"write CT-2461 PR" entry:"1700209665" modified:"1700209689" priority:"H" start:"1700209689" status:"pending" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
-new [description:"write CT-2461 PR" end:"1700209973" entry:"1700209665" modified:"1700209973" priority:"H" status:"completed" tags:"week" tags_week:"x" uuid:"d1a6a6d3-872b-41d2-8258-5c9be638b841"]
+time 1700412573
+old [description:"Finish reading Effect Engineer" entry:"1700233222" modified:"1700235716" priority:"L" start:"1700235716" status:"pending" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
+new [description:"Finish reading Effect Engineer" end:"1700412573" entry:"1700233222" modified:"1700412573" priority:"L" status:"completed" tags:"week" tags_week:"x" uuid:"a3353b5b-13f5-40d4-82c7-05a75ecab7c9"]
 ---
-time 1700209985
-old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700208081" start:"1700208081" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-new [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700209985" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
+time 1700412578
+old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700235737" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
+new [description:"enable mouse inputs in mini-studio" end:"1700412578" entry:"1700158191" modified:"1700412578" status:"completed" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
 ---
-time 1700212220
-old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700208073" priority:"M" start:"1700208073" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700212220" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
----
-time 1700216802
-old [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" entry:"1700196098" modified:"1700198588" priority:"L" status:"pending" tags:"day,week" tags_day:"x" tags_week:"x" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
-new [description:"use basic_result_handle and log_and_ignore for engine api functions in mini-studio" end:"1700216802" entry:"1700196098" modified:"1700216802" priority:"L" status:"completed" tags:"day,week" tags_day:"x" tags_week:"x" uuid:"fb8f8b4c-392b-4e31-9706-d05de103e2f9"]
----
-time 1700221616
-new [description:"revew #554, ReqUpdateActionFeeds Pt 7" entry:"1700221616" modified:"1700221616" status:"pending" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
----
-time 1700221665
-old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700208125" priority:"L" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
-new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700221665" priority:"M" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
----
-time 1700294711
-old [description:"add MOMENTI_MACHINE ssh key as github action ssh key" entry:"1700207969" modified:"1700208113" status:"pending" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
-new [description:"add MOMENTI_MACHINE ssh key as github action ssh key" end:"1700294711" entry:"1700207969" modified:"1700294711" status:"completed" tags:"urgent,week" tags_urgent:"x" tags_week:"x" uuid:"083102ec-0ab9-48ee-9c0f-abb3f4ad3984"]
----
-time 1700295497
-new [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
----
-time 1700373259
-old [description:"enable mouse inputs in mini-studio" entry:"1700158191" modified:"1700212220" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
-new [description:"enable mouse inputs in mini-studio" end:"1700373259" entry:"1700158191" modified:"1700373259" priority:"M" status:"completed" tags:"week" tags_week:"x" uuid:"0587741e-84b0-41df-a94b-2860138cdcfb"]
----
-time 1700458483
-new [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700458483" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
----
-time 1700458510
-old [description:"figure out how to roll back indentation in nvim or clippy" entry:"1700295497" modified:"1700295497" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
-new [description:"figure out how to roll back indentation in nvim or clippy" end:"1700458510" entry:"1700295497" modified:"1700458510" priority:"H" status:"completed" tags:"day" tags_day:"x" uuid:"49f1b0a9-430c-4798-81e2-4a4358bab41c"]
----
-time 1700464747
-new [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464747" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
----
-time 1700464851
-new [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464851" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
----
-time 1700464865
-old [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700458483" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
-new [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700464865" priority:"H" start:"1700464865" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
----
-time 1700464867
-old [description:"revew #554, ReqUpdateActionFeeds Pt 7" entry:"1700221616" modified:"1700221616" status:"pending" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
-new [description:"revew #554, ReqUpdateActionFeeds Pt 7" end:"1700464867" entry:"1700221616" modified:"1700464867" status:"completed" tags:"week" tags_week:"x" uuid:"ed4d9036-9780-4b35-9458-e6979d4a438b"]
----
-time 1700464877
-old [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464747" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
-new [description:"mini-studio PR code review from MJ" entry:"1700464747" modified:"1700464877" priority:"H" start:"1700464877" status:"pending" tags:"day" tags_day:"x" uuid:"f6fb2342-4cb4-4811-a060-0e69280c5c4d"]
----
-time 1700464881
-old [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464851" priority:"H" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
-new [description:"setup two monitor \/ bring caldigit doc" entry:"1700464851" modified:"1700464881" priority:"H" start:"1700464881" status:"pending" tags:"day" tags_day:"x" uuid:"a38edf3b-71da-4a9e-a3a2-cd2ddc7773f0"]
----
-time 1700464890
-old [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700221665" priority:"M" start:"1700208071" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
-new [description:"Draw feeds in mini-studio" entry:"1700158131" modified:"1700464890" priority:"M" status:"pending" tags:"week" tags_week:"x" uuid:"961db3b8-8486-4c99-b101-b178bdcb69dd"]
----
-time 1700465268
-old [description:"figure out cloud api elixir Encoder error" entry:"1700458483" modified:"1700464865" priority:"H" start:"1700464865" status:"pending" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
-new [description:"figure out cloud api elixir Encoder error" end:"1700465268" entry:"1700458483" modified:"1700465268" priority:"H" status:"completed" tags:"day" tags_day:"x" uuid:"e4657a31-07f9-4f9b-ad60-b7c347e78201"]
----
-time 1700475280
-old [description:"write elixir API for maker-engine-v2" entry:"1700158209" modified:"1700209985" status:"pending" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-new [description:"write elixir API for maker-engine-v2" end:"1700475280" entry:"1700158209" modified:"1700475280" status:"completed" tags:"week" tags_week:"x" uuid:"a3feec83-353b-4b83-8d5d-926559667377"]
-
