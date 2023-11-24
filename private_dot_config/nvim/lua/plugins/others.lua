@@ -200,7 +200,6 @@ return {
           vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
-        setupAllLsps()
       end,
     },
     ---@class PluginLspOpts
