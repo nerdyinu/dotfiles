@@ -128,7 +128,7 @@ HELIX_RUNTIME=/home/user-name/src/helix/runtime
 
 autoload bashcompinit
 bashcompinit
-source /Users/inust/CLionProjects/vcpkg/scripts/vcpkg_completion.zsh
+# source /Users/inust/CLionProjects/vcpkg/scripts/vcpkg_completion.zsh
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
@@ -138,3 +138,12 @@ if [[ $(ps --no-header --pid=$PPID --format=comm) != "nu" && -z ${ZSH_EXECUTION_
   [[ -o login ]] && LOGIN_OPTION='--login' || LOGIN_OPTION=''
   exec nu $LOGIN_OPTION
 fi
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+
+# neofetch --iterm2 ~/.Documents/cool_wallpaper.jpeg
+alias cat="bat"
+alias ll="exa -alh"
+alias tree="exa --tree -L 2 -alh"
+. "$HOME/.asdf/asdf.sh"
