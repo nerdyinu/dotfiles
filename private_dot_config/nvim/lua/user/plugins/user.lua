@@ -24,6 +24,7 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
+
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
@@ -40,16 +41,7 @@ return {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },
-  -- {
-  --   "simrat39/rust-tools.nvim",
-  --   opts = {
-  --     tools = {
-  --       inlay_hints = {
-  --         auto = false,
-  --       },
-  --     },
-  --   },
-  -- },
+
   {
     "catppuccin/nvim",
     name = "catppuccin",

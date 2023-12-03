@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.utility.noice-nvim" },
   -- {import = "astrocommunity.pack.zig"},
   { -- further customize the options set by the community
     "copilot.lua",
@@ -27,4 +28,13 @@ return {
       },
     },
   },
+  -- {
+  --
+  --   "simrat39/rust-tools.nvim",
+  --   opts = {
+  --     tools = {
+  --       inlay_hints = { auto = false },
+  --     },
+  --   },
+  -- },
 }
