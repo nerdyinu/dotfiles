@@ -3,7 +3,7 @@ return {
   "AstroNvim/astrocommunity",
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
-  -- { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.pack.typescript" },
@@ -28,13 +28,19 @@ return {
       },
     },
   },
-  -- {
-  --
-  --   "simrat39/rust-tools.nvim",
-  --   opts = {
-  --     tools = {
-  --       inlay_hints = { auto = false },
-  --     },
-  --   },
-  -- },
+  {
+
+    "simrat39/rust-tools.nvim",
+    opts = {
+      tools = {
+        inlay_hints = { auto = false },
+      },
+      server = {
+        on_attach = function(_, bufnr)
+          local rt = require "rust-tools"
+          vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
+        end,
+      },
+    },
+  },
 }
