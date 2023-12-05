@@ -25,11 +25,11 @@ return {
     config = true,
   },
 
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = function(_, opts) table.insert(opts.sections.lualine_x, "😄") end,
-  },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   event = "VeryLazy",
+  --   opts = function(_, opts) table.insert(opts.sections.lualine_x, "😄") end,
+  -- },
   {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
@@ -37,6 +37,10 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   keys = function() return {} end,
+  -- },
   {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
@@ -98,7 +102,6 @@ return {
       require("xbase").setup {} -- see default configuration bellow
     end,
   },
-
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -121,5 +124,14 @@ return {
         { name = "crates" },
       }))
     end,
+  },
+  {
+    "Saecki/crates.nvim",
+    event = { "BufRead Cargo.toml" },
+    opts = {
+      src = {
+        cmp = { enabled = true },
+      },
+    },
   },
 } --

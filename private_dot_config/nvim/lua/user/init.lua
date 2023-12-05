@@ -40,9 +40,9 @@ return {
   },
 
   lsp = {
-    setup_handlers = {
-      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
-    },
+    -- setup_handlers = {
+    --   rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
+    -- },
     config = {
       lua_ls = {
         settings = {
@@ -82,8 +82,8 @@ return {
             },
           },
         },
-        hint = { enabled = true },
       },
+      hints = { enabled = true },
     },
   },
 
@@ -113,29 +113,6 @@ return {
     --     },
     --   },
     -- },
-    {
-      "simrat39/rust-tools.nvim",
-      opts = {
-        dap = {
-          adapter = {
-            type = "executable",
-            command = "lldb-vscode",
-            name = "rt_lldb",
-          },
-        },
-        tools = {
-          inlay_hints = {
-            auto = false,
-          },
-        },
-      },
-    },
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = { "rust_analyzer" },
-      },
-    },
   },
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
