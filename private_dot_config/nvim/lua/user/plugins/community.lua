@@ -41,7 +41,7 @@ return {
         attach = function(_, bufnr)
           -- Hover actions
           local rt = require "rust-tools"
-          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+          vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
         end,
       },
     },
