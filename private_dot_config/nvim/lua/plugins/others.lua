@@ -170,6 +170,9 @@ return {
     },
   },
   {
+    "tpope/vim-fugitive",
+  },
+  {
     "gitsigns.nvim",
     opts = {
       on_attach = function(buffer)
