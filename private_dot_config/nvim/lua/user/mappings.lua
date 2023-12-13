@@ -22,6 +22,13 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<leader>spn"] = { "<Plug>(SpotifySkip)", desc = "Skip the current track" },
+    ["<leader>spp"] = { "<Plug>(SpotifyPause)", desc = "Pause/Resume the current track" },
+    ["<leader>sps"] = { "<Plug>(SpotifySave)", desc = "Add the current track to your library" },
+    ["<leader>spo"] = { ":Spotify<CR>", desc = "Open Spotify Search window" },
+    ["<leader>spd"] = { ":SpotifyDevices<CR>", desc = "Open Spotify Devices window" },
+    ["<leader>spb"] = { "<Plug>(SpotifyPrev)", desc = "Go back to the previous track" },
+    ["<leader>sph"] = { "<Plug>(SpotifyShuffle)", desc = "Toggle Shuffle" },
   },
   t = {
     -- setting a mapping to false will disable it

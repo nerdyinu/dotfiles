@@ -17,7 +17,8 @@ return {
     lualine_require.require = require
     local Util = require "lazyvim.util"
     local icons = require("lazyvim.config").icons
-
+    local status = require("nvim-spotify").status
+    status:start()
     vim.o.laststatus = vim.g.lualine_laststatus
 
     return {
@@ -46,10 +47,11 @@ return {
         },
         lualine_x = {
           -- stylua: ignore
+          status.listen,
           {
             function() return require("noice").api.status.command.get() end,
             cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-            color = Util.ui.fg("Statement"),
+            color = Util.ui.fg "Statement",
           },
           -- stylua: ignore
           {
