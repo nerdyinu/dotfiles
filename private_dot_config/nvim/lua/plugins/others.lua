@@ -301,13 +301,31 @@ return {
       })
     end,
   },
+  {
+    "KadoBOT/nvim-spotify",
+    dependencies = "nvim-telescope/telescope.nvim",
+    config = function()
+      local spotify = require("nvim-spotify")
 
+      spotify.setup({
+        -- default opts
+        status = {
+          update_interval = 10000, -- the interval (ms) to check for what's currently playing
+          format = "%s %t by %a", -- spotify-tui --format argument
+        },
+      })
+    end,
+    build = "make",
+  },
   -- the opts function can also be used to change the default opts:
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, "😄")
+      local status = require("nvim-spotify").status
+      status:start()
+      table.insert(opts.sections.lualine_x, status.listen)
+      -- table.insert(opts.sections.lualine_x, "😄")
     end,
   },
 

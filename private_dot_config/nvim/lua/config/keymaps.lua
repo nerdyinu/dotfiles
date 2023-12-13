@@ -36,3 +36,11 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Leader><Leader>i", "<cmd>IconPickerNormal<cr>", opts)
 vim.keymap.set("n", "<Leader><Leader>y", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
 vim.keymap.set("n", "<C-i>", "<C-I>")
+
+vim.api.nvim_set_keymap("n", "<leader>spn", "<Plug>(SpotifySkip)", { silent = true }) -- Skip the current track
+vim.api.nvim_set_keymap("n", "<leader>spp", "<Plug>(SpotifyPause)", { silent = true }) -- Pause/Resume the current track
+vim.api.nvim_set_keymap("n", "<leader>sps", "<Plug>(SpotifySave)", { silent = true }) -- Add the current track to your library
+vim.api.nvim_set_keymap("n", "<leader>spo", ":Spotify<CR>", { silent = true }) -- Open Spotify Search window
+vim.api.nvim_set_keymap("n", "<leader>spd", ":SpotifyDevices<CR>", { silent = true }) -- Open Spotify Devices window
+vim.api.nvim_set_keymap("n", "<leader>spb", "<Plug>(SpotifyPrev)", { silent = true }) -- Go back to the previous track
+vim.api.nvim_set_keymap("n", "<leader>sph", "<Plug>(SpotifyShuffle)", { silent = true }) -- Toggles shuffle mode
