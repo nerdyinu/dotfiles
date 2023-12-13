@@ -25,22 +25,14 @@ local function setupAllLsps()
 end
 return {
   -- add gruvbox
+
+  { "max397574/better-escape.nvim", event = "InsertCharPre", opts = { timeout = 300 } },
+
   {
     "zbirenbaum/copilot.lua",
-    opts = {
-      suggestion = {
-        enabled = true,
-        keymap = {
-          accept = "<C-l>",
-        },
-      },
-      panel = {
-        enabled = true,
-        keymap = {
-          accept = "<C-l>",
-        },
-      },
-    },
+    cmd = "Copilot",
+    -- event = "User AstroFile",
+    opts = { suggestion = { auto_trigger = true, debounce = 150 } },
   },
   { "ellisonleao/gruvbox.nvim", enabled = false },
 
@@ -76,7 +68,15 @@ return {
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
+      local cmp = require("cmp")
       table.insert(opts.sources, { name = "emoji" })
+      opts.mapping = cmp.mapping.preset.insert({
+        ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-u>"] = cmp.mapping.scroll_docs(4),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+      })
     end,
   },
 
@@ -99,6 +99,12 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        mappings = {
+          i = {
+            ["<C-j>"] = require("telescope.actions").move_selection_next,
+            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+          },
+        },
       },
     },
   },
@@ -120,6 +126,7 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
@@ -155,12 +162,15 @@ return {
                 enable = true,
                 callSnippet = "Replace",
               },
-              -- hint = {enabled=true},
+              hint = { enabled = true },
             },
           },
         },
       },
     },
+  },
+  {
+    "tpope/vim-fugitive",
   },
   {
     "gitsigns.nvim",
@@ -207,10 +217,34 @@ return {
       ---@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
-        tsserver = {},
-      },
-      inlay_hints = {
-        enabled = true,
+
+        tsserver = {
+          -- taken from https://github.com/typescript-language-server/typescript-language-server#workspacedidchangeconfiguration
+          settings = {
+            javascript = {
+              inlayHints = {
+                includeInlayEnumMemberValueHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayParameterNameHints = "all",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayVariableTypeHints = true,
+              },
+            },
+            typescript = {
+              inlayHints = {
+                includeInlayEnumMemberValueHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayParameterNameHints = "all",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayVariableTypeHints = true,
+              },
+            },
+          },
+        },
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -267,13 +301,31 @@ return {
       })
     end,
   },
+  {
+    "KadoBOT/nvim-spotify",
+    dependencies = "nvim-telescope/telescope.nvim",
+    config = function()
+      local spotify = require("nvim-spotify")
 
+      spotify.setup({
+        -- default opts
+        status = {
+          update_interval = 10000, -- the interval (ms) to check for what's currently playing
+          format = "%s %t by %a", -- spotify-tui --format argument
+        },
+      })
+    end,
+    build = "make",
+  },
   -- the opts function can also be used to change the default opts:
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, "😄")
+      local status = require("nvim-spotify").status
+      status:start()
+      table.insert(opts.sections.lualine_x, status.listen)
+      -- table.insert(opts.sections.lualine_x, "😄")
     end,
   },
 

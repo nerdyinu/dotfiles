@@ -6,5 +6,8 @@
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	url = git@github.com:inudev5/lazyvim_config.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = https://github.com/AstroNvim/AstroNvim
+	fetch = +refs/heads/main:refs/remotes/origin/main
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
