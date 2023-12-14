@@ -125,7 +125,7 @@ return {
       }))
     end,
   },
-  { "tpope/vim-fugitive" },
+  { "tpope/vim-fugitive", cmd = "Git" },
   {
     "Saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
