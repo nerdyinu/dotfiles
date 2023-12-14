@@ -782,14 +782,14 @@ alias tree = exa --tree -L 2 -alh
 
 use ~/.cache/starship/init.nu
 let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
-## if $env.TERM == xterm-kitty {
-##     neofetch --kitty ~/Documents/cool_wallpaper.jpg
-## }
-## match $env.TERM_PROGRAM {
-##     WezTerm => {neofetch --iterm2 ~/Documents/city.jpeg},
-##     rio => {neofetch --w3m ~/Documents/cool_wallpaper.jpg},
-##     _ => {}
-## }
+# if $env.TERM == xterm-kitty {
+#     neofetch --kitty ~/Documents/cool_wallpaper.jpg
+# }
+# match $env.TERM_PROGRAM {
+#     WezTerm => {neofetch --iterm2 ~/Documents/city.jpeg},
+#     rio => {neofetch --w3m ~/Documents/cool_wallpaper.jpg},
+#     _ => {}
+# }
 
 
 $env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
