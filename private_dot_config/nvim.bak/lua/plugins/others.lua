@@ -8,19 +8,19 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 local function setupAllLsps()
-	-- Enable snippets-completion (nvim_cmp) and folding (nvim-ufo)
-	local lspCapabilities = vim.lsp.protocol.make_client_capabilities()
+  -- Enable snippets-completion (nvim_cmp) and folding (nvim-ufo)
+  local lspCapabilities = vim.lsp.protocol.make_client_capabilities()
 
-  	lspCapabilities.textDocument.completion.completionItem.snippetSupport = true
-	lspCapabilities.textDocument.foldingRange =
-		{ dynamicRegistration = false, lineFoldingOnly = true }
+  lspCapabilities.textDocument.completion.completionItem.snippetSupport = true
+  lspCapabilities.textDocument.foldingRange =
+  { dynamicRegistration = false, lineFoldingOnly = true }
 
   local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
   for _, ls in ipairs(language_servers) do
-      require('lspconfig')[ls].setup({
-          capabilities = lspCapabilities
-          -- you can add other fields for setting up lsp server in this table
-      })
+    require('lspconfig')[ls].setup({
+      capabilities = lspCapabilities
+      -- you can add other fields for setting up lsp server in this table
+    })
   end
 end
 return {
@@ -205,9 +205,8 @@ return {
       "jose-elias-alvarez/typescript.nvim",
       init = function()
         require("lazyvim.util").lsp.on_attach(function(_, buffer)
-        
           -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
+          vim.keymap.set("n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
       end,
@@ -413,10 +412,10 @@ return {
   },
   {
     "folke/flash.nvim",
-  -- stylua: ignore
-  keys = {
-    { "s", mode = { "n", "x", "o" }, false},
-   },
+    -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, false },
+    },
   },
   -- {
   --   'nvim-orgmode/orgmode',
