@@ -127,7 +127,11 @@ return {
 	window_background_opacity = 1.0,
 	text_background_opacity = 1.0,
 	line_height = 1.3,
-	font = wezterm.font_with_fallback({ "Berkeley Mono", { family = "Symbols Nerd Font", scale = 0.75 } }),
+	font = wezterm.font_with_fallback({
+		"Berkeley Mono",
+		{ family = "Lilex", harfbuzz_features = { "calt", "ss02", "ss04" } },
+		{ family = "Symbols Nerd Font", scale = 0.75 },
+	}),
 	window_frame = {
 		-- The font used in the tab bar.
 		-- Roboto Bold is the default; this font is bundled
