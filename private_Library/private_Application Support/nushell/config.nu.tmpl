@@ -794,9 +794,8 @@ let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 
 $env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
 source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
-
+source ~/.zoxide.nu
 
 use ~/.cache/starship/init.nu
 let text = (figlet -w 150 -f trek -c "Hello Inu,\n Welcome to the Dev World!" )
 # neofetch --iterm2 ~/smoking_lucy.jpeg
-source ~/.zoxide.nu
