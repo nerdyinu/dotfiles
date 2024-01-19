@@ -131,6 +131,7 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+        astro = {},
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
@@ -297,6 +298,7 @@ return {
         "tsx",
         "typescript",
         "rust",
+        "astro",
       })
     end,
   },
