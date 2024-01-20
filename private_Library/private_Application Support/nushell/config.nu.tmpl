@@ -792,7 +792,7 @@ let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 # }
 
 
-$env.ASDF_NU_DIR = ($env.HOME | path join '.asdf')
+$env.ASDF_DIR = ($env.HOME | path join '.asdf')
 source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
 source ~/.zoxide.nu
 
