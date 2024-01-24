@@ -76,3 +76,76 @@ config nu
 z wezterm
 ls
 nvim .
+chezmoi re-add
+ls
+cd ..
+ls
+cd ~
+ls
+cd Documents
+ls
+cd Fedora-Hyprland/
+ls
+./install.sh
+z wezterm
+nvim .
+nvim ~/.zoxide.nu
+config nu
+coreutils
+ls
+which nu
+sudo vim /etc/shells
+nvim ~/.zoxide.nu
+config nu
+nvim ~/.zoxide.nu
+sudo dnf install zoxide
+nu
+nu
+zsh
+nu
+nu
+z /etc/dnf
+nvim .
+z .config
+ls
+cd hypr
+ls
+cd UserConfigs
+ls
+nvim .
+chezmoi diff
+z .config
+ls
+chezmoi add ~/.config/hypr
+chezmoi add ~/.config/btop
+chezmoi add ~/.config/cava
+chezmoi add ~/.config/Kvantum/
+chezmoi add ~/.config/qt5ct/
+chezmoi add ~/.config/qt6ct/
+chezmoi add ~/.config/rofi
+chezmoi add ~/.config/swappy/
+chezmoi add ~/.config/swaylock/
+chezmoi add ~/.config/swaync/
+chezmoi add ~/.config/wal/
+chezmoi add ~/.config/waybar/
+chezmoi add ~/.config/wlogout/
+chezmoi git push origin main
+cat ~/.ssh/id_rsa.pub
+cat
+config nu
+sudo dnf install bat
+cat ~/.ssh/id_rsa.pub
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+nvim ~/.ssh/id_rsa.pub
+chezmoi git push origin main
+ls
+z Documents
+ls
+git clone git@github.com:inudev3/astro-devlog.git
+chezmoi git push origin main
+chezmoi remote -v
+chezmoi git remote -v
+chezmoi git remote remove origin
+chezmoi git remote add origin git@github.com:inudev3/dotfiles.git
+chezmoi git push origin main
