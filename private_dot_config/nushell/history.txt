@@ -68,3 +68,6 @@ cd ..
 chezmoi add nushell
 git config --global user.email "inujung@momenti.tv"
 git config --global user.name "inujung"
+chezmoi add nushell
+chezmoi cd
+config nu
