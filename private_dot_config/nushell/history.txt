@@ -1,0 +1,70 @@
+"\n$env.ASDF_DIR = ($env.HOME | path join '.asdf')\n source " + ($env.HOME | path join '.asdf/asdf.nu') | save --append $nu.config-path
+config nu
+asdf plugin add chezmoi && asdf install chezmoi 2.45.0
+asdf plugin add chezmoi ; asdf install chezmoi 2.45.0
+chezmoi cd
+chezmoi 2.45.0
+cd .config
+cd ~
+cd .config
+ls
+asdf local chezmoi 2.45.0
+chezmoi cd
+curl -sS https://starship.rs/install.sh | sh
+chezmoi apply -v
+config env
+config nu
+chezmoi init https://github.com/inudev3/dotfiles.git
+asdf global chezmoi 2.45.0
+chezmoi init https://github.com/inudev3/dotfiles.git
+chezmoi diff
+chezmoi apply
+starship
+cd ~/.config
+ls
+z ..
+wezterm
+chezmoi init https://github.com/inudev3/dotfiles.git
+chezmoi init --apply --verbose https://github.com/inudev3/dotfiles.git
+chezmoi diff
+config nu
+$nu.config-path
+zsh
+cd ~/.config/wezterm
+ls
+nvim .
+which wezterm
+echo XDG_CONFIG_HOME
+$XDG_CONFIG_HOME
+cd ..
+ls
+cd ~
+ls
+cd .config
+ls
+cd $HOME
+cd $env.HOME
+ls
+nvim .wezterm.lua
+ls
+env
+chezmoi info
+chezmoi --help
+chezmoi data
+chezmoi cd
+env
+$nu.config-path
+$nu.env-path
+chezmoi help
+chezmoi cd
+cd Library
+ls
+cd `Application Support/`
+ls
+cp -r nushell ~/.config/
+cd ~/.config/nushell
+ls
+cd ..
+chezmoi add nushell
+git config --global user.email "inujung@momenti.tv"
+git config --global user.name "inujung"
