@@ -71,3 +71,8 @@ git config --global user.name "inujung"
 chezmoi add nushell
 chezmoi cd
 config nu
+chezmoi re-add
+config nu
+z wezterm
+ls
+nvim .
