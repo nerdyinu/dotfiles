@@ -41,6 +41,9 @@ flatpak run one.ablaze.floorp
 # armcord
 flatpak install flathub xyz.armcord.ArmCord
 flatpak run xyz.armcord.ArmCord
+
+#spotify
+cargo install spotifyd --locked
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
