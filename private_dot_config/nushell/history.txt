@@ -183,3 +183,137 @@ exit
 nu
 exit
 z ~/.config
+chezmoi re-add
+z ~/Downloads/
+ls
+mkdir -p slack
+mkdir slack
+mv usr slack/
+mv etc slack/
+ls
+z slack/
+ls
+slack
+z usr
+z ..
+nvim .
+z ..
+sudo dnf install rpm2cpio cpio<\n>
+sudo dnf install pkg
+sudo dnf install httpd
+sudo dnf download httpd
+ls
+rpm2cpio slack-4.36.138-0.1.el8.x86_64.rpm | cpio -idmv
+slack
+config env
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.spotify.Client
+sudo dnf install snapd
+sudo ln -s /var/lib/snapd/snap /snap<\n>
+sudo snap install spotify
+sudo flatpak install -y --from https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
+sudo dnf install -y flatpak
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \<\n>https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+snap remove spotify --purge
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+flatpak install -y --from https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
+flatpak remote
+flatpak remote -v
+flatpak --help
+flatpak remote-ls
+clear
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.spotify.Client
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo snap install spotify
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo=https://download1.rpmfusion.org/free/fedora/rpmfusion-free.repo
+nvim .
+sudo dnf install git gcc make openssl-devel glibc-devel glib2-devel json-c-devel libcurl-devel libXScrnSaver-devel dbus-devel qt5-qtx11extras-devel qt5-qtbase-devel qt5-qtmultimedia-devel qt5-qttools-devel
+z ~
+ls
+z Documents/
+git clone --depth=1 https://github.com/Spotifyd/spotifyd.git
+cd spotifyd/
+cargo build --release
+sudo dnf install alsa
+sudo dnf install libasound2-dev
+sudo dnf install libudev-dev<\n>
+sudo dnf install gcc-c++ libX11-devel alsa-lib-devel systemd-devel
+cargo build --release
+sudo make install
+z Documents/
+ls
+z ..
+ls
+rm -rf spotifyd/
+cargo install spotifyd --locked
+config env
+spotify
+spotifyd
+ls
+slack
+spotifyd
+z ..
+spotifyd
+z ~/.cargo/bin
+ls
+spotifyd
+sudo dnf install portaudio-devel
+z Documents/
+ls
+z ~/Documents/
+git clone --depth=1 https://github.com/Spotifyd/spotifyd.git
+z spotifyd/
+ls
+cargo build --release
+ls
+mv target/release/spotifyd ~/.cargo/bin/
+z ..
+spotifyd
+mv ~/.cargo/bin/spotifyd spotifyd/target/release/
+z spotifyd/target/release/
+spotifyd
+ls
+spotifyd
+./spotifyd
+flatpak install discord
+discord
+sudo dnf upgrade --refresh
+flatpak remove discord
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+rpm -E %fedora
+nvim .
+ls
+z ..
+ls
+z ..
+z Documents/
+z ~
+cd ~
+ls
+z Documents/
+ls
+z ..
+z Down
+z Docu
+clear
+chezmoi diff
+z hypr
+z .config
+z hypr
+z ~
+z hypr
+ls
+sudo mkdir -p /usr/local/share/fonts/symbols-nerd-font
+sudo cp ~/Downloads/SymbolsNerdFont* /usr/local/share/fonts/symbols-nerd-font/
+z symbols-nerd
+z fonts
+z /usr/local/share/fonts/symbols-nerd-font/
+ls
+sudo fc-cache -v
+nvim .
+z hypr
