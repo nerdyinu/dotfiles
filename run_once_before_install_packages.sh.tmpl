@@ -32,7 +32,7 @@ sudo dnf install zoxide
 
 #flatpak
 sudo dnf install flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepoflatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # floorp
 flatpak install flathub one.ablaze.floorp
@@ -43,7 +43,7 @@ flatpak install flathub xyz.armcord.ArmCord
 flatpak run xyz.armcord.ArmCord
 
 #spotify
-sudo dnf install alsa-devel
+sudo dnf install alsa-lib-devel
 cargo install spotifyd --locked
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
