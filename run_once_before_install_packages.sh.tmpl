@@ -22,16 +22,16 @@ sudo dnf install neovim
 
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo dnf install openssl-devel pkg-config
 cargo install nu
 
-#shell programs
-dnf copr enable atim/starship
-dnf install starship
-dnf copr enable atim/zoxide
-dnf install zoxide
+sudo dnf copr enable atim/starship
+sudo dnf install starship
+sudo dnf copr enable atim/zoxide
+sudo dnf install zoxide
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
-brew bundle
+brew bundle install
 {{ end -}}
