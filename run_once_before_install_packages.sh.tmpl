@@ -43,6 +43,7 @@ flatpak install flathub xyz.armcord.ArmCord
 flatpak run xyz.armcord.ArmCord
 
 #spotify
+sudo dnf install alsa-devel
 cargo install spotifyd --locked
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
