@@ -30,6 +30,17 @@ sudo dnf install starship
 sudo dnf copr enable atim/zoxide
 sudo dnf install zoxide
 
+#flatpak
+sudo dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepoflatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# floorp
+flatpak install flathub one.ablaze.floorp
+flatpak run one.ablaze.floorp
+
+# armcord
+flatpak install flathub xyz.armcord.ArmCord
+flatpak run xyz.armcord.ArmCord
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
