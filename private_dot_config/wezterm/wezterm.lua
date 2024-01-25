@@ -114,7 +114,7 @@ return {
 	color_schemes = {
 		[selected_scheme] = scheme,
 	},
-	font_size = 10.0,
+	font_size = 9.0,
 	color_scheme = selected_scheme,
 	hide_tab_bar_if_only_one_tab = true,
 	adjust_window_size_when_changing_font_size = false,
@@ -125,7 +125,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	window_background_opacity = 0.8,
+	window_background_opacity = 1.0,
 	text_background_opacity = 1.0,
 	line_height = 1.3,
 	font = wezterm.font_with_fallback({

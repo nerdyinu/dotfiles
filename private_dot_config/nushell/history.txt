@@ -149,3 +149,28 @@ chezmoi git remote -v
 chezmoi git remote remove origin
 chezmoi git remote add origin git@github.com:inudev3/dotfiles.git
 chezmoi git push origin main
+chezmoi re-add
+chezmoi git push origin main
+z .config
+ls
+z hypr
+nvim .
+z wezterm
+nvim .
+z ..
+z hypr
+nvim .
+z .config
+z hypr
+sudo dnf xorg-xev
+sudo dnf install fcitx5 fcitx-hangul
+sudo dnf install fcitx5 fcitx5-hangul
+locale
+sudo dnf install glibc-langpack-ko
+z /etc
+nvim environment
+ls
+sudo nvim .
+nvim .
+sudo nvim environment
+chezmoi diff
