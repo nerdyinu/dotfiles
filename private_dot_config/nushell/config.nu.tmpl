@@ -781,7 +781,6 @@ alias ll = exa -alh
 alias tree = exa --tree -L 2 -alh
 
 use ~/.cache/starship/init.nu
-let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 # if $env.TERM == xterm-kitty {
 #     neofetch --kitty ~/Documents/cool_wallpaper.jpg
 # }
@@ -793,7 +792,9 @@ let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 
 
 $env.ASDF_DIR = ($env.HOME | path join '.asdf')
-source /home/inu/.asdf/asdf.nu
+source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
 source ~/.zoxide.nu
 
 use ~/.cache/starship/init.nu
+let text = (figlet -w 150 -f trek -c "Hello Inu,\n Welcome to the Dev World!" )
+#

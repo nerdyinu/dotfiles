@@ -6,6 +6,10 @@ sudo dnf install firefox
 sudo dnf install fcitx5 fcitx5-hangul
 sudo dnf install glibc-langpack-ko
 localectl set-locale LANG-ko_KR.UTF-8
+
+#asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+
 #lazygit
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit
@@ -19,6 +23,12 @@ sudo dnf install neovim
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install nu
+
+#shell programs
+dnf copr enable atim/starship
+dnf install starship
+dnf copr enable atim/zoxide
+dnf install zoxide
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
