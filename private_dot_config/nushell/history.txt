@@ -174,3 +174,12 @@ sudo nvim .
 nvim .
 sudo nvim environment
 chezmoi diff
+z ~/.config/chezmoi/
+ls
+nvim .
+exit
+nu
+exit
+nu
+exit
+z ~/.config
