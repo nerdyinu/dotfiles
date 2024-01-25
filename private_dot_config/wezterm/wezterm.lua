@@ -125,7 +125,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	window_background_opacity = 1.0,
+	window_background_opacity = 0.8,
 	text_background_opacity = 1.0,
 	line_height = 1.3,
 	font = wezterm.font_with_fallback({
