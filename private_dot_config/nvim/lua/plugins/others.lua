@@ -155,6 +155,23 @@ return {
           },
           hint = { enabled = true },
         },
+        intelephense = {
+          settings = {
+            stubs = {
+              "Core",
+              "SPL",
+              "imagick",
+              "standard",
+              "pcre",
+              "date",
+              "json",
+              "ctype",
+              "SimpleXML",
+              "Reflection",
+              "exif",
+            },
+          },
+        },
         lua_ls = {
           settings = {
 
@@ -308,6 +325,7 @@ return {
         "typescript",
         "rust",
         "astro",
+        "php",
       })
     end,
   },
