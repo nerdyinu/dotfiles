@@ -1,10 +1,10 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-sudo dnf install flatpak
-sudo dnf install firefox
+sudo dnf install -y  flatpak
+sudo dnf install -y firefox
 # korean support
-sudo dnf install fcitx5 fcitx5-hangul
-sudo dnf install glibc-langpack-ko
+sudo dnf install -y fcitx5 fcitx5-hangul
+sudo dnf install -y glibc-langpack-ko
 localectl set-locale LANG-ko_KR.UTF-8
 
 #asdf
@@ -12,39 +12,39 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
 #lazygit
 sudo dnf copr enable atim/lazygit -y
-sudo dnf install lazygit
+sudo dnf install -y lazygit
 
 sudo dnf copr enable wezfurlong/wezterm-nightly
-sudo dnf install wezterm
+sudo dnf install -y wezterm
 
 sudo dnf copr enable agriffis/neovim-nightly
-sudo dnf install neovim
+sudo dnf install -y neovim
 
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo dnf install openssl-devel pkg-config
+sudo dnf install -y openssl-devel pkg-config
 cargo install nu
 
 sudo dnf copr enable atim/starship
-sudo dnf install starship
+sudo dnf install -y starship
 sudo dnf copr enable atim/zoxide
-sudo dnf install zoxide
+sudo dnf install -y zoxide
 
 #flatpak
-sudo dnf install flatpak
+sudo dnf install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # floorp
-flatpak install flathub one.ablaze.floorp
+flatpak install -y flathub one.ablaze.floorp
 
 # armcord
-flatpak install flathub xyz.armcord.ArmCord
+flatpak install -y flathub xyz.armcord.ArmCord
 
 #obsidian
-flatpak install flathub md.obsidian.Obsidian
+flatpak install -y flathub md.obsidian.Obsidian
 
 #spotify
-sudo dnf install alsa-lib-devel
+sudo dnf install -y alsa-lib-devel
 cargo install spotifyd --locked
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
