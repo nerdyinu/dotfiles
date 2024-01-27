@@ -5,3 +5,6 @@
     - lazyvim distro
 - wezterm
 - nushell
+- fedora asahi remix
+- hyprland
+- waybar
