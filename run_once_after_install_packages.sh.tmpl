@@ -1,0 +1,4 @@
+#fonts
+#!/bin/sh
+sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /usr/local/share/
+sudo fc-cache -v
