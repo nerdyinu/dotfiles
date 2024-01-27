@@ -55,8 +55,8 @@ sudo dnf install -y bat
 sudo dnf install -y eza
 
 #fonts
-cp -r ~/.config/fonts/ /usr/local/share/
-sudo fc-cache-v
+sudo cp -r ~/.config/fonts/ /usr/local/share/
+sudo fc-cache -v
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
