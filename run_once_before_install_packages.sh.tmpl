@@ -22,6 +22,8 @@ sudo dnf install -y neovim
 
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 sudo dnf install -y openssl-devel pkg-config
 cargo install nu
 
@@ -46,6 +48,15 @@ flatpak install -y flathub md.obsidian.Obsidian
 #spotify
 sudo dnf install -y alsa-lib-devel
 cargo install spotifyd --locked
+
+#bat
+sudo dnf install -y bat
+#exa
+sudo dnf install -y eza
+
+#fonts
+cp -r ~/.config/fonts/ /usr/local/share/fonts/
+sudo fc-cache-v
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
