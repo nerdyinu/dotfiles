@@ -57,6 +57,9 @@ sudo dnf install -y eza
 #fonts
 sudo cp -r ~/.config/fonts/ /usr/local/share/
 sudo fc-cache -v
+
+#awscli
+sudo dnf install -y awscli
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
