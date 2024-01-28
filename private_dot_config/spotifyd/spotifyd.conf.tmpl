@@ -1,6 +1,6 @@
 [spotifyd]
-username = {{ (awsSecretsManager "spotify_credential").username }}
-password ={{ (awsSecretsManager "spotify_credential").password }}
+username = "{{ (awsSecretsManager "spotify_credential").username }}"
+password ="{{ (awsSecretsManager "spotify_credential").password }}"
 backend = "alsa"
 # device_name = "fedora_asahi"
 # control = "fedora_asahi"
