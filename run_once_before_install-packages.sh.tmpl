@@ -1,7 +1,12 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-sudo dnf install -y  flatpak
+#flatpak
+sudo dnf install -y flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+#firefox
 sudo dnf install -y firefox
+
 # korean support
 sudo dnf install -y fcitx5 fcitx5-hangul
 sudo dnf install -y glibc-langpack-ko
@@ -32,9 +37,7 @@ sudo dnf install -y starship
 sudo dnf copr enable atim/zoxide
 sudo dnf install -y zoxide
 
-#flatpak
-sudo dnf install -y flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 
 # floorp
 flatpak install -y flathub one.ablaze.floorp
@@ -58,6 +61,9 @@ sudo dnf install -y eza
 
 #awscli
 sudo dnf install -y awscli
+
+sudo dnf update
+flatpak update
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 cd ~
