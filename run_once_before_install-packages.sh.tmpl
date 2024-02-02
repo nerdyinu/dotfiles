@@ -1,6 +1,8 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
+
 sudo dnf install -y firefox
+
 # korean support
 sudo dnf install -y fcitx5 fcitx5-hangul
 sudo dnf install -y glibc-langpack-ko
