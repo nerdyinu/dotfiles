@@ -141,6 +141,7 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         astro = {},
+        elixirls = {},
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
