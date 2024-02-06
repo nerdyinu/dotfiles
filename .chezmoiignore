@@ -1,0 +1,22 @@
+{{ if eq .chezmoi.os "darwin" }}
+./private_Library
+{{ else if eq .chezmoi.os "linux" }}
+./private_dot_config/Kvantum
+./private_dot_config/btop
+./private_dot_config/cava
+./private_dot_config/fonts
+./private_dot_config/hypr
+./private_dot_config/kitty
+./private_dot_config/nushell
+./private_dot_config/qt5ct
+./private_dot_config/qt6ct
+./private_dot_config/rofi
+./private_dot_config/spotifyd
+./private_dot_config/swappy
+./private_dot_config/swaylock
+./private_dot_config/swaync
+./private_dot_config/sysyemd
+./private_dot_config/wal
+./private_dot_config/waybar
+./private_dot_config/wlogout
+{{ end }}
