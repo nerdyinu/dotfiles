@@ -113,6 +113,11 @@ return {
 			remote_address = "172.28.231.247",
 			username = "jeong-in-u",
 		},
+		{
+			name = "mstudio.linux",
+			remote_address = "172.28.183.180",
+			username = "inu",
+		},
 	},
 	color_schemes = {
 		[selected_scheme] = scheme,
