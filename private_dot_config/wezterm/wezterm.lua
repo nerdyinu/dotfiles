@@ -23,25 +23,20 @@ function return_bg_image(appearance)
 	end
 end
 
--- wezterm.on('gui-startup', function()
---   local project_dir = wezterm.home_dir .. '~/CLionProjects/momenti-core'
---    local tab, main_pane, window = mux.spawn_window {
---     cwd = project_dir,
---   }
---   local nnn_pane = main_pane:split {
---     direction = 'Right',
---     cwd = project_dir,
--- 		size = 0.3
---   }
---   nnn_pane:send_text 'nnn \n'
---   -- NOTE: '\n' will execute the command, otherwise it will be only pasted
---    local lazygit_pane = nnn_pane:split {
---     direction = 'Bottom',
---     cwd = project_dir,
--- 		size = 0.5
---   }
---   lazygit_pane:send_text 'lazygit \n'
--- end)
+wezterm.on("gui-startup", function(cmd)
+	local args = {}
+	if cmd then
+		args = cmd.args
+	end
+	local tab, main_pane, window = mux.spawn_window({
+		cwd = wezterm.home_dir,
+		args = args,
+	})
+	local tab, pane, window = mux.spawn_window({
+		workspace = "mbp",
+		domain = { DomainName = "mbp.darwin" },
+	})
+end)
 
 local selected_scheme = "tokyonight"
 local scheme = wezterm.get_builtin_color_schemes()[selected_scheme]
