@@ -23,10 +23,6 @@ function return_bg_image(appearance)
 	end
 end
 
-if wezterm.config_builder then
-	config = wezterm.config_builder()
-end
-
 -- wezterm.on('gui-startup', function()
 --   local project_dir = wezterm.home_dir .. '~/CLionProjects/momenti-core'
 --    local tab, main_pane, window = mux.spawn_window {
@@ -111,6 +107,13 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 end)
 
 return {
+	ssh_domains = {
+		{
+			name = "mbp.darwin",
+			remote_address = "172.28.231.247",
+			username = "jeong-in-u",
+		},
+	},
 	color_schemes = {
 		[selected_scheme] = scheme,
 	},
