@@ -1,6 +1,6 @@
-{{ if eq .chezmoi.os "linux" }}
+{{- if ne .chezmoi.os "darwin" }}
 ./private_Library
-{{ else if eq .chezmoi.os "darwin" }}
+{{- else if ne .chezmoi.os "linue" }}
 ./private_dot_config/Kvantum
 ./private_dot_config/btop
 ./private_dot_config/cava
@@ -19,4 +19,4 @@
 ./private_dot_config/wal
 ./private_dot_config/waybar
 ./private_dot_config/wlogout
-{{ end }}
+{{- end }}
