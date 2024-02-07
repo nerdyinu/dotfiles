@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "linux" }}
 ./private_Library
-{{ else if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" }}
 ./private_dot_config/Kvantum
 ./private_dot_config/btop
 ./private_dot_config/cava
