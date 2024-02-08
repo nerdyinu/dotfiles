@@ -1,5 +1,6 @@
 #!/bin/sh
-
+{{ if eq .chezmoi.os "linux" -}}
 #fonts
 sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /usr/local/share/
 sudo fc-cache -v
+{{ end -}}

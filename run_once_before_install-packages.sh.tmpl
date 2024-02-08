@@ -63,5 +63,6 @@ sudo dnf install -y eza
 #awscli
 sudo dnf install -y awscli
 {{ else if eq .chezmoi.os "darwin" -}}
-
+#!/bin/sh
+brew install awscli
 {{ end -}}
