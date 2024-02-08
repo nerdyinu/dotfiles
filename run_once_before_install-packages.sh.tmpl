@@ -27,7 +27,7 @@ sudo dnf install -y neovim
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc 
-source ~/.zshrc
+source ~/.bashrc
 sudo dnf install -y openssl-devel pkg-config
 cargo install nu
 
@@ -61,7 +61,6 @@ sudo dnf install -y eza
 #elixir
 asdf plugin add erlang & asdf install erlang latest & asdf global erlang latest
 asdf plugin add elixir & asdf install elixir latest & asdf global elixir latest
-
 
 #awscli
 sudo dnf install -y awscli
