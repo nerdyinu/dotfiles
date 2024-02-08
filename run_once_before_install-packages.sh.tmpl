@@ -79,6 +79,7 @@ sudo dnf install -y awscli
 
 #lpass
 sudo dnf install -y lastpass-cli
+lpass login inujung@momenti.tv
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 brew install awscli
