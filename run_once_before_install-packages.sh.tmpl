@@ -76,6 +76,9 @@ sudo dnf install -y lastpass-cli
 
 #awscli
 sudo dnf install -y awscli
+
+#lpass
+sudo dnf install -y lastpass-cli
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 brew install awscli
