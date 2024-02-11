@@ -82,5 +82,8 @@ sudo dnf install -y lastpass-cli
 lpass login inujung@momenti.tv
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
+brew update
 brew install awscli
+brew install lastpass-cli
+lpass login inujung@momenti.tv
 {{ end -}}
