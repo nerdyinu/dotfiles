@@ -28,11 +28,11 @@ wezterm.on("gui-startup", function(cmd)
 	if cmd then
 		args = cmd.args
 	end
-	local tab, main_pane, window = mux.spawn_window({
+	local tab, main_pane, window = mux.spawn_tab({
 		cwd = wezterm.home_dir,
 		args = args,
 	})
-	local tab, pane, window = mux.spawn_window({
+	local tab, pane, window = mux.spawn_tab({
   {{ if eq .chezmoi.os "linux" -}}
 		workspace = "mbp",
 		domain = { DomainName = "mbp.darwin" },
