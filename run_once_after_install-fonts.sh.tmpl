@@ -1,7 +1,9 @@
 #!/bin/sh
+{{ if eq .chezmoi.os "linux" -}}
 #fonts
 sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /usr/local/share/
 sudo fc-cache -v
-{{ if eq .chezmoi.os "darwin" -}}
+{{ else if eq .chezmoi.os "darwin" -}}
+sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /Library/Fonts/
 brew bundle install
 {{ end -}}
