@@ -123,6 +123,7 @@ return {
 			remote_address = "172.28.59.172",
 			username = "inu",
 		},
+
     {
         name = "mstudio.darwin",
         remote_address = "172.28.168.126",
@@ -135,7 +136,7 @@ return {
   {{ if eq .chezmoi.os "linux" -}}
 	font_size = 10.0,
   {{ else if eq .chezmoi.os "darwin" -}}
-  font_size = 11.0
+  font_size = 11.0,
   {{ end -}}
 	color_scheme = selected_scheme,
 	hide_tab_bar_if_only_one_tab = true,
