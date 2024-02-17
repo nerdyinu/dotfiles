@@ -4,11 +4,13 @@
 #battery charge limit
 echo 80 | sudo tee /sys/class/power_supply/macsmc-battery/charge_control_end_threshold
 
-sudo dnf install -y firefox
+sudo dnf install -y dnf5
+
+sudo dnf5 install -y firefox
 
 # korean support
-sudo dnf install -y fcitx5 fcitx5-hangul
-sudo dnf install -y glibc-langpack-ko
+sudo dnf5 install -y fcitx5 fcitx5-hangul
+sudo dnf5 install -y glibc-langpack-ko
 localectl set-locale LANG-ko_KR.UTF-8
 
 #asdf
@@ -16,28 +18,28 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
 #lazygit
 sudo dnf copr enable atim/lazygit -y
-sudo dnf install -y lazygit
+sudo dnf5 install -y lazygit
 
 sudo dnf copr enable wezfurlong/wezterm-nightly
-sudo dnf install -y wezterm
+sudo dnf5 install -y wezterm
 
 sudo dnf copr enable agriffis/neovim-nightly
-sudo dnf install -y neovim
+sudo dnf5 install -y neovim
 
 #rust install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc 
 source ~/.bashrc
-sudo dnf install -y openssl-devel pkg-config
+sudo dnf5 install -y openssl-devel pkg-config
 cargo install nu
 
 sudo dnf copr enable atim/starship
-sudo dnf install -y starship
+sudo dnf5 install -y starship
 sudo dnf copr enable atim/zoxide
-sudo dnf install -y zoxide
+sudo dnf5 install -y zoxide
 
 #flatpak
-sudo dnf install -y flatpak
+sudo dnf5 install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # floorp
@@ -50,17 +52,17 @@ flatpak install -y flathub xyz.armcord.ArmCord
 flatpak install -y flathub md.obsidian.Obsidian
 
 #spotify
-sudo dnf install -y alsa-lib-devel
+sudo dnf5 install -y alsa-lib-devel
 cargo install spotifyd --locked
 
 #bat
-sudo dnf install -y bat
+sudo dnf5 install -y bat
 #exa
-sudo dnf install -y eza
+sudo dnf5 install -y eza
 
 #elixir
-sudo dnf install -y erlang
-sudo dnf install -y elixir
+sudo dnf5 install -y erlang
+sudo dnf5 install -y elixir
 #asdf plugin-add erlang 
 #asdf install erlang latest
 #asdf global-erlang latest
@@ -74,13 +76,13 @@ asdf install nodejs latest
 asdf global nodejs latest
 
 #lastpass
-sudo dnf install -y lastpass-cli
+sudo dnf5 install -y lastpass-cli
 
 #awscli
-sudo dnf install -y awscli
+sudo dnf5 install -y awscli
 
 #lpass
-sudo dnf install -y lastpass-cli
+sudo dnf5 install -y lastpass-cli
 lpass login inujung@momenti.tv
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
