@@ -22,7 +22,12 @@ function return_bg_image(appearance)
 		return "/Users/inust/Downloads/snowtown.jpeg"
 	end
 end
-
+wezterm.on('mux-startup', function()
+  local tab, pane, window = mux.spawn_tab ({
+		workspace = "mbp",
+		domain = { DomainName = "mbp.darwin" },
+    })
+end)
 wezterm.on("gui-startup", function(cmd)
 	local args = {}
 	if cmd then
