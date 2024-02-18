@@ -85,9 +85,7 @@ sudo dnf5 install -y awscli
 sudo dnf5 install -y lastpass-cli
 lpass login inujung@momenti.tv
 
-#zero-tier
-curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join {{ (index (lastpass "zerotier_network_id") 0).note.publicKey -}}
+
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
