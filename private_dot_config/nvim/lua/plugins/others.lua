@@ -142,6 +142,7 @@ return {
         pyright = {},
         astro = {},
         elixirls = {},
+        html = {},
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
