@@ -144,6 +144,7 @@ return {
         svelte = {},
         elixirls = {},
         html = {},
+        cssls = {},
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
