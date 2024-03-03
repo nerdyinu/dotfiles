@@ -2,8 +2,7 @@
 
 ## my setting
 - chezmoi (dotfile manager)
-- dotfile config for both desktop(fedroa/aarch64) and laptop(darwin/aarch64)
-
+- Fedora Asahi Linux (both desktop and laptop)
 - hyprland
 - waybar
 - neovim(lazyvim distro)
