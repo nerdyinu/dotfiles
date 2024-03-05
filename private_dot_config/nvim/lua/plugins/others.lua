@@ -176,6 +176,7 @@ return {
             },
           },
         },
+        volar = {},
         lua_ls = {
           settings = {
 
