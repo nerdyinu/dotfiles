@@ -37,14 +37,7 @@ wezterm.on("gui-startup", function(cmd)
 		cwd = wezterm.home_dir,
 		args = args,
 	})
-	local tab, pane, window = mux.spawn_tab({
-  {{ if eq .chezmoi.os "linux" -}}
-		workspace = "mbp",
-		domain = { DomainName = "mbp.darwin" },
-  {{ else if eq .chezmoi.os "darwin" -}}
-    workspace = "mstudio",
-    domain = { DomainName = "mstudio.linux"},
-  {{ end -}}
+
 	})
 end)
 
@@ -125,7 +118,7 @@ return {
       },
 		{
 			name = "mstudio.linux",
-			remote_address = "172.28.45.166",
+			remote_address = "172.28.107.18",
 			username = "inu",
 		},
 
