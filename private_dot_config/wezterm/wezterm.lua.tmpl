@@ -28,17 +28,7 @@ wezterm.on('mux-startup', function()
 		domain = { DomainName = "mbp.darwin" },
     })
 end)
-wezterm.on("gui-startup", function(cmd)
-	local args = {}
-	if cmd then
-		args = cmd.args
-	end
-	local tab, main_pane, window = mux.spawn_tab({
-		cwd = wezterm.home_dir,
-		args = args,
-	})
 
-end)
 
 local selected_scheme = "tokyonight"
 local scheme = wezterm.get_builtin_color_schemes()[selected_scheme]
