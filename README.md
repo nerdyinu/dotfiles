@@ -1,8 +1,8 @@
 # dotfiles
 
 ## my setting
-- chezmoi (dotfile manager)
-- Fedora Asahi Linux (both desktop and laptop)
+- chezmoi (dotfile manager) enables cross-platform
+- Fedora Asahi Linux for desktop / OS X for laptop
 - hyprland
 - waybar
 - neovim(lazyvim distro)
