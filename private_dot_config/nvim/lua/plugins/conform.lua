@@ -16,8 +16,6 @@ return {
           ["json"] = { "biome" },
           ["jsonc"] = { "biome" },
           ["yaml"] = { "biome" },
-          ["markdown"] = { "biome" },
-          ["markdown.mdx"] = { "biome" },
           ["graphql"] = { "biome" },
           ["handlebars"] = { "biome" },
         },

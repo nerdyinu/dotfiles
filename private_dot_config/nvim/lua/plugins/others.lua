@@ -43,7 +43,7 @@ return {
     -- event = "User AstroFile",
     opts = { suggestion = { auto_trigger = true, debounce = 150 } },
   },
-  { "ellisonleao/gruvbox.nvim",     enabled = false },
+  { "ellisonleao/gruvbox.nvim", enabled = false },
 
   -- Configure LazyVim to load gruvbox
   {
@@ -61,7 +61,7 @@ return {
   -- },
 
   -- disable trouble
-  { "folke/trouble.nvim",                       enabled = false },
+  { "folke/trouble.nvim", enabled = false },
 
   -- add symbols-outline
   {
@@ -334,7 +334,7 @@ return {
         "heex",
         "eex",
         "vue",
-        "svelte"
+        "svelte",
       })
     end,
   },
@@ -348,7 +348,7 @@ return {
         -- default opts
         status = {
           update_interval = 10000, -- the interval (ms) to check for what's currently playing
-          format = "%s %t by %a",  -- spotify-tui --format argument
+          format = "%s %t by %a", -- spotify-tui --format argument
         },
       })
     end,
