@@ -5,8 +5,12 @@ return {
     opts = {},
     config = function()
       require("typescript-tools").setup({
-
+        on_attach = function(client)
+          client.server_capabilities.documentFormattingProvider = true
+          client.server_capabilities.documentRangeFormattingProvider = true
+        end,
         settings = {
+
           -- spawn additional tsserver instance to calculate diagnostics on it
           separate_diagnostic_server = true,
           -- "change"|"insert_leave" determine when the client asks the server about diagnostic
