@@ -140,7 +140,16 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
-        astro = {},
+        astro = {
+          settings = {
+            hint = {
+              enabled = true,
+            },
+            completion = {
+              enable = true,
+            },
+          },
+        },
         svelte = {},
         elixirls = {},
         html = {},
@@ -324,6 +333,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       -- add tsx and treesitter
+
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
@@ -335,7 +345,20 @@ return {
         "eex",
         "vue",
         "svelte",
+        "mdx",
       })
+    end,
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        auto_install = true,
+        highlight = {
+          enable = true,
+        },
+        autotag = {
+          enable = true,
+        },
+      })
+      vim.treesitter.language.register("markdown", "mdx")
     end,
   },
   {

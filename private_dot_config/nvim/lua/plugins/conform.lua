@@ -18,6 +18,7 @@ return {
           ["yaml"] = { "biome" },
           ["graphql"] = { "biome" },
           ["handlebars"] = { "biome" },
+          ["astro"] = { "biome" },
         },
         format_on_save = {
           -- I recommend these options. See :help conform.format for details.
