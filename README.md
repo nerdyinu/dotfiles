@@ -1,7 +1,8 @@
 # dotfiles
 
 ## my setting
-- chezmoi (dotfile manager) enables cross-platform
+- chezmoi (dotfile manager) template for cross-platform
+- OSX / Fedora 
 - hyprland
 - waybar
 - neovim(lazyvim distro)
