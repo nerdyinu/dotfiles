@@ -135,7 +135,7 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      inlay_hints = { enabled = true },
+      -- inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
@@ -150,6 +150,7 @@ return {
             },
           },
         },
+        tailwindcss = {},
         svelte = {},
         elixirls = {},
         html = {},

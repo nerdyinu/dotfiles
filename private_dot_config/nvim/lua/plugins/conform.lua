@@ -6,8 +6,8 @@ return {
         formatters_by_ft = {
           javascript = { "biome" },
           javascriptreact = { "biome" },
-          typescript = { "biome" },
-          typescriptreact = { "biome" },
+          typescript = { "prettier", "prettierd" },
+          typescriptreact = { "prettier", "prettierd" },
           ["vue"] = { "biome" },
           ["css"] = { "biome" },
           ["scss"] = { "biome" },
@@ -18,7 +18,7 @@ return {
           ["yaml"] = { "biome" },
           ["graphql"] = { "biome" },
           ["handlebars"] = { "biome" },
-          ["astro"] = { "biome" },
+          ["astro"] = { "prettier" },
         },
         format_on_save = {
           -- I recommend these options. See :help conform.format for details.
