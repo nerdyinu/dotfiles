@@ -146,7 +146,7 @@ return {
               enabled = true,
             },
             completion = {
-              enable = true,
+              enabled = true,
             },
           },
         },
@@ -347,6 +347,7 @@ return {
         "vue",
         "svelte",
         "mdx",
+        "css",
       })
     end,
     config = function()
@@ -470,6 +471,11 @@ return {
           end
         end, { "i", "s" }),
       })
+      opts.formatting = {
+        format = require("lspkind").cmp_format({
+          before = require("tailwind-tools.cmp").lspkind_format,
+        }),
+      }
     end,
   },
   {

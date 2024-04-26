@@ -2,7 +2,6 @@
 require("config.lazy")
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
-ft_to_parser.astro = "tsx"
 ---@class ParserConfig
 parser_config.nu = {
   install_info = {
@@ -11,9 +10,6 @@ parser_config.nu = {
     branch = "main",
   },
   filetype = "nu",
-}
-parser_config.astro = {
-  filetype = "astro",
 }
 
 vim.filetype.add({
