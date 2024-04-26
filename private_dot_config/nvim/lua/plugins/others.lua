@@ -141,6 +141,13 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         astro = {
+
+          typescript = {
+            serverPath = vim.fs.normalize(
+              "~/.local/share/pnpm/global/5/node_modules/typescript/lib/tsserverlibrary.js"
+            ),
+          },
+
           settings = {
             hint = {
               enabled = true,
@@ -308,21 +315,7 @@ return {
   --   "nvim-treesitter/nvim-treesitter",
   --   opts = {
   --     ensure_installed = {
-  --       "bash",
-  --       "html",
-  --       "javascript",
-  --       "json",
-  --       "lua",
-  --       "markdown",
-  --       "markdown_inline",
-  --       "python",
-  --       "query",
-  --       "regex",
-  --       "tsx",
-  --       "typescript",
-  --       "vim",
-  --       "yaml",
-  --       "rust",
+
   --     },
   --   },
   -- },
@@ -352,6 +345,7 @@ return {
     end,
     config = function()
       require("nvim-treesitter.configs").setup({
+
         auto_install = true,
         highlight = {
           enable = true,
@@ -471,11 +465,6 @@ return {
           end
         end, { "i", "s" }),
       })
-      opts.formatting = {
-        format = require("lspkind").cmp_format({
-          before = require("tailwind-tools.cmp").lspkind_format,
-        }),
-      }
     end,
   },
   {
