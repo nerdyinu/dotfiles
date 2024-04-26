@@ -141,13 +141,11 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         astro = {
-
           typescript = {
             serverPath = vim.fs.normalize(
               "~/.local/share/pnpm/global/5/node_modules/typescript/lib/tsserverlibrary.js"
             ),
           },
-
           settings = {
             hint = {
               enabled = true,
@@ -157,6 +155,7 @@ return {
             },
           },
         },
+        unocss = {},
         tailwindcss = {},
         svelte = {},
         elixirls = {},
