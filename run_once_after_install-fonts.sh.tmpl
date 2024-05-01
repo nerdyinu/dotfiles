@@ -4,8 +4,8 @@
 sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /usr/local/share/
 sudo fc-cache -v
 #zero-tier
-curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join {{ (index (lastpass "zerotier_network_id") 0).note.publicKey -}}
+#curl -s https://install.zerotier.com | sudo bash
+#sudo zerotier-cli join {{ (index (lastpass "zerotier_network_id") 0).note.publicKey -}}
 {{ else if eq .chezmoi.os "darwin" -}}
 sudo cp -r {{ .chezmoi.homeDir }}/.config/fonts/ /Library/Fonts/
 brew bundle install
