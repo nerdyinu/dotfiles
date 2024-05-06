@@ -6,8 +6,8 @@ return {
         formatters_by_ft = {
           javascript = { "biome" },
           javascriptreact = { "biome" },
-          typescript = { "prettier", "prettierd" },
-          typescriptreact = { "prettier", "prettierd" },
+          typescript = { "biome" },
+          typescriptreact = { "biome" },
           ["vue"] = { "biome" },
           ["css"] = { "biome" },
           ["scss"] = { "biome" },
