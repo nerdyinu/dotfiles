@@ -2,7 +2,7 @@
 
 ## my setting
 - chezmoi (dotfile manager) template for cross-platform
-- OSX / Fedora 
+- OSX / Fedora (asahi linux)
 - hyprland
 - waybar
 - neovim(lazyvim distro)
