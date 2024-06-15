@@ -120,9 +120,8 @@ return {
 	color_schemes = {
 		[selected_scheme] = scheme,
 	},
-  enable_wayland=false,
   {{ if eq .chezmoi.os "linux" -}}
-	font_size = 16.0,
+	font_size = 8.0,
   {{ else if eq .chezmoi.os "darwin" -}}
   font_size = 11.0,
   {{ end -}}
