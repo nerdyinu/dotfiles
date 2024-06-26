@@ -19,6 +19,7 @@ return {
           tsserver_format_options = {
             allowIncompleteCompletions = true,
             allowRenameOfImportPath = true,
+            organizeImportsCollatoin = true,
           },
           tsserver_file_preferences = {
             includeInlayEnumMemberValueHints = true,
