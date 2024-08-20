@@ -38,7 +38,7 @@
   },
   "assistant": {
     "default_open_ai_model": "gpt-4-1106-preview",
-    "version": "1"
+    "version": "2"
   },
   "inlay_hints": {
     "enabled": true
