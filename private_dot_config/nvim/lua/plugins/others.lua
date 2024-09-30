@@ -37,12 +37,12 @@ return {
       })
     end,
   },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    -- event = "User AstroFile",
-    opts = { suggestion = { auto_trigger = true, debounce = 150 } },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   -- event = "User AstroFile",
+  --   opts = { suggestion = { auto_trigger = true, debounce = 150 } },
+  -- },
   { "ellisonleao/gruvbox.nvim", enabled = false },
 
   -- Configure LazyVim to load gruvbox
@@ -161,6 +161,20 @@ return {
         elixirls = {},
         html = {},
         cssls = {},
+        rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
+              },
+              cargo = {
+                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+                extraArgs = { "--profile", "rust-analyzer" },
+              },
+            },
+          },
+          hint = { enabled = true },
+        },
         intelephense = {
           settings = {
             stubs = {

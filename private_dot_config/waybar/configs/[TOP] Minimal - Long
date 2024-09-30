@@ -3,7 +3,10 @@
 // ### Minimal - Long ### //
 
 {
-"include": "~/.config/waybar/modules",
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  ],
 "layer": "top",
 //"mode": "dock",
 "exclusive": true,
@@ -27,9 +30,10 @@
 	],
 "modules-center": [
 	"clock",
+	"idle_inhibitor",
 	],
 "modules-right": [
-	"group/motherboard",
+	"group/mobo_drawer",
 	"custom/separator#blank_2",
 	"group/laptop",
 	"custom/separator#blank_2",

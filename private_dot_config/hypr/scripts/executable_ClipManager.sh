@@ -1,5 +1,5 @@
 #!/bin/bash
-## /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Clipboard Manager. This script uses cliphist, rofi, and wl-copy.
 
 # Actions:
@@ -8,7 +8,7 @@
 
 while true; do
     result=$(
-        rofi -dmenu \
+        rofi -i -dmenu \
             -kb-custom-1 "Control-Delete" \
             -kb-custom-2 "Alt-Delete" \
             -config ~/.config/rofi/config-clipboard.rasi < <(cliphist list)

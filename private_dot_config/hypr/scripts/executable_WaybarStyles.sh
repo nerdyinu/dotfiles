@@ -1,5 +1,5 @@
 #!/bin/bash
-## /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Script for waybar styles
 
 set -euo pipefail
@@ -26,21 +26,12 @@ menu() {
 # Apply selected style
 apply_style() {
     ln -sf "$waybar_styles/$1.css" "$waybar_style"
-    restart_waybar_if_needed
-}
-
-# Restart Waybar if it's running
-restart_waybar_if_needed() {
-    if pgrep -x "waybar" >/dev/null; then
-        pkill waybar
-        sleep 0.1  # Delay for Waybar to completely terminate
-    fi
     "${SCRIPTSDIR}/Refresh.sh" &
 }
 
 # Main function
 main() {
-    choice=$(menu | rofi -dmenu -config "$rofi_config")
+    choice=$(menu | rofi -i -dmenu -config "$rofi_config")
 
     if [[ -z "$choice" ]]; then
         echo "No option selected. Exiting."
