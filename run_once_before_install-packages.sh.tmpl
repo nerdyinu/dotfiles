@@ -102,3 +102,24 @@ brew update
 brew install awscli
 brew install lastpass-cli
 {{ end -}}
+
+set -euo pipefail
+
+FLAKES_DIR="$HOME/.config/flakes"
+
+# Iterate through all directories in ~/.config/flakes
+find "$FLAKES_DIR" -type d -mindepth 1 -maxdepth 1 | while read -r flake_dir; do
+    if [ -f "$flake_dir/flake.nix" ]; then
+        echo "Installing flake from: $flake_dir"
+        (
+            cd "$flake_dir"
+            if ! nix profile install .# ; then
+                echo "Error installing flake from $flake_dir"
+                # Uncomment next line if you want to exit on first error
+                # exit 1
+            fi
+        )
+    else
+        echo "Skipping $flake_dir - no flake.nix found"
+    fi
+done
