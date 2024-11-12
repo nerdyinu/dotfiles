@@ -1,0 +1,27 @@
+version: 2.1
+
+jobs:
+  build:
+    docker: # Use docker executor
+      - image: nixos/nix:2.18.9-arm64 # Specify your Docker image in a list
+    resource_class: arm.large
+    environment:
+      CACHIX_NAME: zen-browser
+    steps:
+      - run:
+          name: Set up environment
+          command: |
+            nix-env -iA nixpkgs.cachix nixpkgs.bash nixpkgs.git nixpkgs.curl nixpkgs.jq
+            cachix use $CACHIX_NAME
+            cachix authtoken $CACHIX_AUTH_TOKEN
+      - run:
+          name: Build and Push
+          command: |
+            nix build --max-jobs 1 --extra-experimental-features nix-command --extra-experimental-features flakes --json --accept-flake-config "github:youwen5/zen-browser-source-flake" \
+            | jq -r '.[].outputs | to_entries[].value' \
+            | cachix push zen-browser
+
+workflows:
+  build:
+    jobs:
+      - build

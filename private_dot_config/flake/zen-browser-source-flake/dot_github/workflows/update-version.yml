@@ -1,0 +1,59 @@
+name: Update Flake Version and Firefox Version
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fetch latest release tag of zen-browser/desktop
+        run: |
+          RELEASE_TAG=$(curl -s https://api.github.com/repos/zen-browser/desktop/releases/latest | jq -r .tag_name)
+
+          # Check if the tag contains the letter 'a'
+          if [[ "$RELEASE_TAG" != *a* ]]; then
+            exit 1
+          fi
+
+          # Save tag as an output (optional)
+          echo "release_tag=$RELEASE_TAG" >> $GITHUB_ENV
+
+      - name: Fetch surfer.json and extract Firefox version
+        id: fetch_firefox_version
+        run: |
+          curl -sL "https://raw.githubusercontent.com/zen-browser/desktop/refs/tags/${{ env.release_tag }}/surfer.json" -o surfer.json
+          FIREFOX_VERSION=$(jq -r '.version.version' surfer.json)
+          echo "FIREFOX_VERSION=${FIREFOX_VERSION}" >> $GITHUB_ENV
+
+      - name: Update flake.nix with new release version
+        run: |
+          sed -i "18s/version = \".*\";/version = \"${RELEASE_TAG}\";/" flake.nix
+
+      - name: Update flake.nix with new Firefox version
+        run: |
+          sed -i "19s/firefoxVersion = \".*\";/firefoxVersion = \"${FIREFOX_VERSION}\";/" flake.nix
+
+      # - name: Install Nix
+      #   uses: DeterminateSystems/nix-installer-action@main
+
+      # - name: Update flake
+      #   run: nix flake update
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add flake.nix
+          git add flake.lock
+          git commit -m "Update version to $RELEASE_TAG and Firefox version to $FIREFOX_VERSION"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
