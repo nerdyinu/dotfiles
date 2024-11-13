@@ -111,7 +111,6 @@ NIX_FLAGS="--extra-experimental-features nix-command --extra-experimental-featur
 # Create the flakes directory if it doesn't exist
 mkdir -p "$FLAKES_DIR"
 
-nix-shell -p curl git
 
 # Iterate through all directories in ~/.config/flakes
 find "$FLAKES_DIR" -type d -mindepth 1 -maxdepth 1 | while read -r flake_dir; do
@@ -119,6 +118,7 @@ find "$FLAKES_DIR" -type d -mindepth 1 -maxdepth 1 | while read -r flake_dir; do
         echo "Installing flake from: $flake_dir"
         (
             cd "$flake_dir"
+            nix-shell -p curl git
             if ! nix profile install $NIX_FLAGS .# ; then
                 echo "Error installing flake from $flake_dir"
                 # Uncomment next line if you want to exit on first error

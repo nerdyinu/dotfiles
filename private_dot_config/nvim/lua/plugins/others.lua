@@ -139,21 +139,26 @@ return {
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
-        ts_ls = { enabled = false },
+
         pyright = {},
-        astro = {
-          typescript = {
-            serverPath = vim.fs.normalize(
-              "~/.local/share/pnpm/global/5/node_modules/typescript/lib/tsserverlibrary.js"
-            ),
-          },
+        vtsls = {
           settings = {
-            hint = {
-              enabled = true,
+            typescript = {
+              inlayHints = {
+                variableTypes = { enabled = true },
+              },
             },
-            completion = {
-              enabled = true,
-            },
+          },
+        },
+        deno = {
+          lint = true,
+          inlayHints = {
+            parameterNames = { enalbed = "all" },
+            parameterTypes = { enabled = true },
+            variableTypes = { enabled = true },
+            propertyDeclarationTypes = { enabled = true },
+            functionLikeReturnTypes = { enabled = true },
+            enumMemberValues = { enabled = true },
           },
         },
         unocss = {},

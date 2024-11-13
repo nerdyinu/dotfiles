@@ -19,3 +19,6 @@ vim.filetype.add({
   filename = {},
   pattern = {},
 })
+vim.g.markdown_fenced_languages = {
+  "ts=typescript",
+}
