@@ -1,13 +1,6 @@
 return {
 
   {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-  {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },

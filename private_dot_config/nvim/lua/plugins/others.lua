@@ -28,6 +28,25 @@ return {
 
   { "max397574/better-escape.nvim", event = "InsertCharPre", opts = { timeout = 300 } },
   {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  },
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
@@ -177,6 +196,7 @@ return {
                 extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
                 extraArgs = { "--profile", "rust-analyzer" },
               },
+              inlayHints = { enabled = true },
             },
           },
           hint = { enabled = true },
