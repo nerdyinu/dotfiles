@@ -486,13 +486,13 @@ return {
   --     })
   --   end,
   -- },
-  -- {
-  --   "folke/flash.nvim",
-  --   -- stylua: ignore
-  --   keys = {
-  --     { "s", mode = { "n", "x", "o" }, false },
-  --   },
-  -- },
+  {
+    "folke/flash.nvim",
+    -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, false },
+    },
+  },
   -- {
   --   'nvim-orgmode/orgmode',
   --   dependencies = {
