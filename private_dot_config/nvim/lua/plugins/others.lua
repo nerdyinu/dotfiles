@@ -89,7 +89,16 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
-
+{
+  'saghen/blink.cmp',
+  opts = {
+    keymap = {
+      preset = "enter",
+    ['<C-j>'] = { 'select_prev', 'fallback' },
+    ['<C-k>'] = { 'select_next', 'fallback' },
+    }
+  }
+}
   -- override nvim-cmp and add cmp-emoji
   -- {
   --   "hrsh7th/nvim-cmp",
@@ -158,26 +167,20 @@ return {
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
-
         pyright = {},
-        vtsls = {
-          settings = {
-            typescript = {
-              inlayHints = {
-                variableTypes = { enabled = true },
-              },
-            },
+        astro = {
+          typescript = {
+            serverPath = vim.fs.normalize(
+              "~/.local/share/pnpm/global/5/node_modules/typescript/lib/tsserverlibrary.js"
+            ),
           },
-        },
-        deno = {
-          lint = true,
-          inlayHints = {
-            parameterNames = { enalbed = "all" },
-            parameterTypes = { enabled = true },
-            variableTypes = { enabled = true },
-            propertyDeclarationTypes = { enabled = true },
-            functionLikeReturnTypes = { enabled = true },
-            enumMemberValues = { enabled = true },
+          settings = {
+            hint = {
+              enabled = true,
+            },
+            completion = {
+              enabled = true,
+            },
           },
         },
         unocss = {},

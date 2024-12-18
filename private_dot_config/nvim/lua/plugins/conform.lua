@@ -15,7 +15,7 @@ return {
           ["html"] = { "eslint_d" },
           ["json"] = { "eslint_d" },
           ["jsonc"] = { "eslint_d" },
-          ["yaml"] = { "eslint_d" },
+          ["yaml"] = { "prettier" },
           ["graphql"] = { "eslint_d" },
           ["handlebars"] = { "eslint_d" },
           ["astro"] = { "eslint_d" },
