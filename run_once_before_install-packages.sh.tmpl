@@ -42,15 +42,6 @@ sudo dnf5 install -y zoxide
 sudo dnf5 install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# floorp
-flatpak install -y flathub one.ablaze.floorp
-
-# armcord
-flatpak install -y flathub xyz.armcord.ArmCord
-
-#obsidian
-flatpak install -y flathub md.obsidian.Obsidian
-
 #bat
 sudo dnf5 install -y bat
 #exa
@@ -99,33 +90,4 @@ brew install awscli
 brew install lastpass-cli
 {{ end -}}
 
-#nix install
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-  sh -s -- install
 
-set -euo pipefail
-
-FLAKES_DIR="$HOME/.config/flakes"
-NIX_FLAGS="--extra-experimental-features nix-command --extra-experimental-features flakes --accept-flake-config"
-
-# Create the flakes directory if it doesn't exist
-mkdir -p "$FLAKES_DIR"
-
-
-# Iterate through all directories in ~/.config/flakes
-find "$FLAKES_DIR" -type d -mindepth 1 -maxdepth 1 | while read -r flake_dir; do
-    if [ -f "$flake_dir/flake.nix" ]; then
-        echo "Installing flake from: $flake_dir"
-        (
-            cd "$flake_dir"
-            nix-shell -p curl git
-            if ! nix profile install $NIX_FLAGS .# ; then
-                echo "Error installing flake from $flake_dir"
-                # Uncomment next line if you want to exit on first error
-                # exit 1
-            fi
-        )
-    else
-        echo "Skipping $flake_dir - no flake.nix found"
-    fi
-done
