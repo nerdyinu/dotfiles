@@ -89,16 +89,6 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
-{
-  'saghen/blink.cmp',
-  opts = {
-    keymap = {
-      preset = "enter",
-    ['<C-j>'] = { 'select_prev', 'fallback' },
-    ['<C-k>'] = { 'select_next', 'fallback' },
-    }
-  }
-}
   -- override nvim-cmp and add cmp-emoji
   -- {
   --   "hrsh7th/nvim-cmp",
@@ -118,6 +108,7 @@ return {
   -- },
 
   -- change some telescope options and a keymap to browse plugin files
+
   {
     "nvim-telescope/telescope.nvim",
     keys = {
@@ -495,13 +486,13 @@ return {
   --     })
   --   end,
   -- },
-  {
-    "folke/flash.nvim",
-    -- stylua: ignore
-    keys = {
-      { "s", mode = { "n", "x", "o" }, false },
-    },
-  },
+  -- {
+  --   "folke/flash.nvim",
+  --   -- stylua: ignore
+  --   keys = {
+  --     { "s", mode = { "n", "x", "o" }, false },
+  --   },
+  -- },
   -- {
   --   'nvim-orgmode/orgmode',
   --   dependencies = {
