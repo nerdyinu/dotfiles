@@ -12,6 +12,6 @@ autocmd("BufWritePre", {
     tstools.add_missing_imports(true)
     tstools.organize_imports(true)
     tstools.fix_all(true)
-    require("conform").format({ bufnr = args.buf })
+    require("conform").format({ bufnr = args.buf, lsp_fallback = true })
   end,
 })

@@ -3,6 +3,11 @@ return {
     "stevearc/conform.nvim",
     opts = function(_, opts)
       require("conform").setup({
+        formatters = {
+          eslint_d = {
+            args = { "--fix" },
+          },
+        },
         formatters_by_ft = {
           javascript = { "eslint_d" },
           javascriptreact = { "eslint_d" },
