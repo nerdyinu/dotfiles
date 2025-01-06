@@ -5,6 +5,8 @@
 "include": [
   "$HOME/.config/waybar/Modules",
   "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
   ],
 "layer": "top",
 "position": "top",
@@ -32,8 +34,7 @@
 		
 "modules-right": [
 	"hyprland/window",
-	"custom/separator#blank",
-	"custom/separator#blank", 
+	"custom/separator#blank_2",
 	"pulseaudio",
 	"custom/separator#blank",
 	"custom/power",					
