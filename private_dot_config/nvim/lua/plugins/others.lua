@@ -180,6 +180,21 @@ return {
         elixirls = {},
         html = {},
         cssls = {},
+        rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
+              },
+              cargo = {
+                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+                extraArgs = { "--profile", "rust-analyzer" },
+              },
+              inlayHints = { enabled = true },
+            },
+          },
+          hint = { enabled = true },
+        },
         intelephense = {
           settings = {
             stubs = {
