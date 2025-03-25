@@ -223,10 +223,6 @@ $env.config = {
         }
     }
 
-    filesize: {
-        metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
-        format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
-    }
 
     cursor_shape: {
         emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line (line is the default)
@@ -235,8 +231,7 @@ $env.config = {
     }
 
     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
-    use_grid_icons: true
-    footer_mode: "25" # always, never, number_of_rows, auto
+    footer_mode: 25 # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
     buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
@@ -766,8 +761,6 @@ $env.config = {
         }
     ]
 }
-let posh_dir = (brew --prefix oh-my-posh | str trim)
-let posh_theme = $'($posh_dir)/themes/'
 # Change the theme names to: zash/space/robbyrussel/powerline/powerlevel10k_lean/
 # material/half-life/lambda Or double lines theme: amro/pure/spaceship, etc.
 # For more [Themes demo](https://ohmyposh.dev/docs/themes)
@@ -777,11 +770,10 @@ let posh_theme = $'($posh_dir)/themes/'
 # source ~/.oh-my-posh.nu
 
 alias cat = bat
-alias ll = exa -alh
-alias tree = exa --tree -L 2 -alh
+alias ll = eza -alh
+alias tree = eza --tree -L 2 -alh
 
 use ~/.cache/starship/init.nu
-let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 # if $env.TERM == xterm-kitty {
 #     neofetch --kitty ~/Documents/cool_wallpaper.jpg
 # }
@@ -792,10 +784,15 @@ let text = (figlet -w 90 -f usaflag -c "Welcome to Inu's shell")
 # }
 
 
-$env.ASDF_DIR = ($env.HOME | path join '.asdf')
-source {{ .chezmoi.homeDir }}/.asdf/asdf.nu
+let shims_dir = (
+  if ( $env | get --ignore-errors ASDF_DATA_DIR | is-empty ) {
+    $env.HOME | path join '.asdf'
+  } else {
+    $env.ASDF_DATA_DIR
+  } | path join 'shims'
+)
+$env.PATH = ( $env.PATH | split row (char esep) | where { |p| $p != $shims_dir } | prepend $shims_dir )
 source ~/.zoxide.nu
 
 use ~/.cache/starship/init.nu
-let text = (figlet -w 150 -f trek -c "Hello Inu,\n Welcome to the Dev World!" )
-# neofetch --iterm2 ~/smoking_lucy.jpeg
+alias code = code --force-device-scale-factor=2
