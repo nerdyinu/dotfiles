@@ -93,6 +93,9 @@ return {
           end
         end,
       },
+      filesystem = {
+        hijack_netrw_behavior = "disabled",
+      },
       window = {
         mappings = {
           ["[b"] = "prev_source",
