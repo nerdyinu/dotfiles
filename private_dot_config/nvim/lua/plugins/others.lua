@@ -175,7 +175,6 @@ return {
           },
         },
         unocss = {},
-        tailwindcss = {},
         svelte = {},
         elixirls = {},
         html = {},
