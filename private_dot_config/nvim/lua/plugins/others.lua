@@ -182,14 +182,23 @@ return {
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
-              checkOnSave = {
+              check = {
                 command = "clippy",
+                extraArgs = { "--all-features", "--tests", "--", "-W", "clippy::pedantic" },
               },
-              cargo = {
-                extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
-                extraArgs = { "--profile", "rust-analyzer" },
+              rustfmt = {
+                extraArgs = { "--config", "group_imports=StdExternalCrate" },
               },
-              inlayHints = { enabled = true },
+              inlayHints = {
+                chainingHints = { enable = true },
+                parameterHints = { enable = true },
+                typeHints = { enable = true },
+                renderColons = true,
+                closingBraceHints = {
+                  enable = true,
+                  minLines = 25,
+                },
+              },
             },
           },
           hint = { enabled = true },
@@ -241,6 +250,14 @@ return {
   {
     "gitsigns.nvim",
     opts = {
+      current_line_blame = true,
+      update_debounce = 100,
+      auto_attach = true,
+      attach_to_untracked = true,
+      watch_gitdir = {
+        interval = 1000,
+        follow_files = true,
+      },
       on_attach = function(buffer)
         local gs = package.loaded.gitsigns
 
