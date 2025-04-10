@@ -179,30 +179,7 @@ return {
         elixirls = {},
         html = {},
         cssls = {},
-        rust_analyzer = {
-          settings = {
-            ["rust-analyzer"] = {
-              check = {
-                command = "clippy",
-                extraArgs = { "--all-features", "--tests", "--", "-W", "clippy::pedantic" },
-              },
-              rustfmt = {
-                extraArgs = { "--config", "group_imports=StdExternalCrate" },
-              },
-              inlayHints = {
-                chainingHints = { enable = true },
-                parameterHints = { enable = true },
-                typeHints = { enable = true },
-                renderColons = true,
-                closingBraceHints = {
-                  enable = true,
-                  minLines = 25,
-                },
-              },
-            },
-          },
-          hint = { enabled = true },
-        },
+,
         intelephense = {
           settings = {
             stubs = {
@@ -552,3 +529,4 @@ return {
     end,
   },
 }
+
