@@ -1,1 +1,8 @@
-init:lazyvim
+feat:inlay hint
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    Inu Jung <inujung@momenti.tv>
+# Date:      Sun Nov 5 00:57:42 2023 +0900
+#

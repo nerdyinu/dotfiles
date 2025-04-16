@@ -1,6 +1,13 @@
 return {
 
   {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },
@@ -29,7 +36,7 @@ return {
     name = "catppuccin",
     opts = {
       flavour = "mocha",
-      transparent_background = false,
+      transparent_background = true,
       integrations = {
         alpha = true,
         aerial = true,
