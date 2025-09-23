@@ -3,11 +3,11 @@
 # Script for Random Wallpaper ( CTRL ALT W)
 
 wallDIR="$HOME/Pictures/wallpapers"
-scriptsDir="$HOME/.config/hypr/scripts"
+SCRIPTSDIR="$HOME/.config/hypr/scripts"
 
-focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
+focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
 
-PICS=($(find ${wallDIR} -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" \)))
+PICS=($(find -L ${wallDIR} -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.pnm" -o -name "*.tga" -o -name "*.tiff" -o -name "*.webp" -o -name "*.bmp" -o -name "*.farbfeld" -o -name "*.gif" \)))
 RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
 
 
@@ -21,9 +21,10 @@ SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration
 
 swww query || swww-daemon --format xrgb && swww img -o $focused_monitor ${RANDOMPICS} $SWWW_PARAMS
 
-sleep 1.5
-${scriptsDir}/WallustSwww.sh
+wait $!
+"$SCRIPTSDIR/WallustSwww.sh" &&
 
-sleep 0.5
-${scriptsDir}/Refresh.sh 
+wait $!
+sleep 2
+"$SCRIPTSDIR/Refresh.sh"
 
