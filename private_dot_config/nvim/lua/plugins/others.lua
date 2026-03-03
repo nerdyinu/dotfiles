@@ -346,6 +346,18 @@ return {
   -- If you'd rather extend the default config, use the code below instead:
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    build = function()
+      -- update parsers, if TSUpdate exists
+      if vim.fn.exists(":TSUpdate") == 2 then
+        vim.cmd("TSUpdate")
+      end
+    end,
+
+    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    ---@module 'nvim-treesitter'
+    ---@type TSConfig
+    ---@diagnostic disable-next-line: missing-fields
     opts = function(_, opts)
       -- add tsx and treesitter
 
@@ -365,11 +377,12 @@ return {
       })
     end,
     config = function()
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter.config").setup({
 
         auto_install = true,
         highlight = {
           enable = true,
+          disable = { "vim" },
         },
         autotag = {
           enable = true,
@@ -425,14 +438,13 @@ return {
 
   -- add any tools you want to have installed below
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "stylua",
         "shellcheck",
         "shfmt",
         "flake8",
-        "rustfmt",
       },
     },
   },
